@@ -1,0 +1,448 @@
+/* ══════════════════════════════════════════════════════════
+   TRANSITIONS.CSS — Global Animations & Transitions
+   Briket Kompos · SMA Trinitas Bandung
+   Applied to: Pengertian, About, Cara Pembuatan
+══════════════════════════════════════════════════════════ */
+
+/*
+   NOTE ON SA-FADE:
+   .sa-fade, .sa-up, .sa-left, .sa-right, .sa-zoom, .sa-visible
+   are fully defined in about.css — no duplicate needed here.
+   The transitions.js initSaFadeReveal() adds .sa-visible via JS.
+*/
+
+
+/* ─────────────────────────────────────────
+   2. PAGE TRANSITION OVERLAY
+───────────────────────────────────────────*/
+#page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  background: var(--forest, #0e2714);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.52s cubic-bezier(0.77, 0, 0.175, 1);
+}
+#page-transition-overlay.tx-slide-in {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  pointer-events: all;
+}
+#page-transition-overlay.tx-slide-out {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+#page-transition-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #b5e853, #7ec832, #b5e853);
+  background-size: 200% 100%;
+  animation: txBarShimmer 1s linear infinite;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 12px rgba(181,232,83,0.8);
+}
+@keyframes txBarShimmer {
+  0%   { background-position: 0% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─────────────────────────────────────────
+   3. SCROLL PROGRESS BAR
+───────────────────────────────────────────*/
+#tx-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  width: 0%;
+  background: linear-gradient(90deg, #b5e853, #7ec832);
+  z-index: 100001;
+  box-shadow: 0 0 10px rgba(181,232,83,0.6);
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* ─────────────────────────────────────────
+   4. CURSOR GLOW
+───────────────────────────────────────────*/
+#tx-cursor-glow {
+  position: fixed;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(181,232,83,0.055) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  /* JS will update left/top */
+}
+
+/* ─────────────────────────────────────────
+   5. TOPBAR — enhanced scroll shrink
+   (works alongside existing topbar styles)
+───────────────────────────────────────────*/
+.topbar {
+  transition: padding 0.4s ease,
+              box-shadow 0.4s ease,
+              backdrop-filter 0.4s ease !important;
+}
+.topbar.tx-scrolled {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  backdrop-filter: blur(18px) !important;
+  box-shadow: 0 2px 32px rgba(0,0,0,0.45),
+              0 0 0 1px rgba(181,232,83,0.08) !important;
+}
+
+/* ─────────────────────────────────────────
+   6. TOPBAR NAV — underline sweep
+───────────────────────────────────────────*/
+.topbar-nav a {
+  position: relative !important;
+}
+.topbar-nav a::after {
+  /* override existing (already present in some pages) */
+  left: 0 !important;
+  transform: none !important;
+  transition: width 0.35s cubic-bezier(0.4,0,0.2,1) !important;
+  box-shadow: 0 0 8px rgba(181,232,83,0.5) !important;
+}
+.topbar-nav a:hover::after {
+  width: 100% !important;
+}
+
+/* ─────────────────────────────────────────
+   7. CARD HOVER — wa-contact-item only
+   (other cards handled by about.css)
+───────────────────────────────────────────*/
+.wa-contact-item {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+}
+.wa-contact-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(37,211,102,0.5);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* ─────────────────────────────────────────
+   8. BUTTON RIPPLE
+───────────────────────────────────────────*/
+.btn-lime,
+.btn-ghost,
+.idoc-btn,
+.wa-btn {
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────
+   9. STEP NUMBER BOUNCE ON HOVER
+───────────────────────────────────────────*/
+.step-num {
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+              background 0.3s ease,
+              box-shadow 0.3s ease !important;
+}
+.step-item:hover .step-num {
+  transform: scale(1.22) rotate(-5deg) !important;
+  box-shadow: 0 0 18px rgba(181,232,83,0.55) !important;
+}
+.step-item {
+  transition: transform 0.28s ease !important;
+}
+.step-item:hover {
+  transform: translateX(6px) !important;
+}
+
+/* ─────────────────────────────────────────
+   10. PROCESS BLOCK HOVER GLOW
+───────────────────────────────────────────*/
+.process-block {
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+.process-block:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 40px rgba(181,232,83,0.08) !important;
+}
+
+/* ─────────────────────────────────────────
+   11. GRADIENT ANIMATE on section titles
+   NOTE: .hero-headline em is EXCLUDED here
+   because it uses display:block for layout.
+   Only ah-title & idoc-title use inline em.
+───────────────────────────────────────────*/
+.ah-title em,
+.idoc-title em {
+  background: linear-gradient(135deg, #b5e853, #7ec832, #d4f17e, #b5e853);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: txGradientShift 4s ease infinite;
+}
+/* Fallback for browsers without clip support */
+@supports not (-webkit-background-clip: text) {
+  .ah-title em,
+  .idoc-title em {
+    -webkit-text-fill-color: unset;
+    color: var(--lime, #b5e853);
+    background: none;
+  }
+}
+
+/* hero-headline em stays block (layout-critical), just animate color */
+.hero-headline em {
+  animation: txLimeColorPulse 4s ease infinite;
+}
+@keyframes txLimeColorPulse {
+  0%, 100% { color: #b5e853; }
+  50%       { color: #d4f17e; }
+}
+@keyframes txGradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─────────────────────────────────────────
+   12. STAT NUMBER POP ANIMATION
+───────────────────────────────────────────*/
+.ah-stat-num.tx-count-pop,
+.idoc-stat-num.tx-count-pop {
+  animation: txStatPop 0.55s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes txStatPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); color: var(--lime,#b5e853); }
+  100% { transform: scale(1); }
+}
+
+/* ─────────────────────────────────────────
+   13. SIDEBAR STAGGER ANIMATION (on .open)
+───────────────────────────────────────────*/
+.sidebar.open .sb-links li {
+  animation: txSidebarIn 0.4s cubic-bezier(0.16,1,0.3,1) backwards;
+}
+.sidebar.open .sb-links li:nth-child(1) { animation-delay: 0.07s; }
+.sidebar.open .sb-links li:nth-child(2) { animation-delay: 0.14s; }
+.sidebar.open .sb-links li:nth-child(3) { animation-delay: 0.21s; }
+@keyframes txSidebarIn {
+  from { opacity:0; transform: translateX(-18px); }
+  to   { opacity:1; transform: translateX(0); }
+}
+
+/* ─────────────────────────────────────────
+   14. MARQUEE FADE EDGE MASK
+───────────────────────────────────────────*/
+.marquee-wrap {
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 7%, black 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 7%, black 93%, transparent);
+}
+
+/* ─────────────────────────────────────────
+   15. TAG PILL HOVER
+───────────────────────────────────────────*/
+.tag {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              letter-spacing 0.3s ease !important;
+  cursor: default;
+}
+.tag:hover {
+  transform: scale(1.06) !important;
+  box-shadow: 0 4px 20px rgba(181,232,83,0.22) !important;
+  letter-spacing: 0.14em !important;
+}
+
+/* ─────────────────────────────────────────
+   16. FOOTER LINK NUDGE
+───────────────────────────────────────────*/
+.footer-col ul li a,
+.footer-social-links li a {
+  transition: color 0.25s ease, padding-left 0.25s ease !important;
+}
+.footer-col ul li a:hover,
+.footer-social-links li a:hover {
+  padding-left: 8px !important;
+  color: var(--lime, #b5e853) !important;
+}
+
+/* ─────────────────────────────────────────
+   17. LOGO HOVER SCALE
+───────────────────────────────────────────*/
+.topbar-brand {
+  transition: opacity 0.3s ease, transform 0.3s ease !important;
+}
+.topbar-brand:hover {
+  transform: scale(1.04) !important;
+}
+
+/* ─────────────────────────────────────────
+   18. ACTIVE SIDEBAR LINK GLOW PULSE
+───────────────────────────────────────────*/
+.sb-links li a.active {
+  animation: txActiveLinkGlow 2.5s ease-in-out infinite;
+}
+@keyframes txActiveLinkGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(181,232,83,0); }
+  50%      { box-shadow: 0 0 18px rgba(181,232,83,0.18); }
+}
+
+/* ─────────────────────────────────────────
+   19. FLOATING PARTICLES CANVAS
+───────────────────────────────────────────*/
+#tx-particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1; /* Always behind all page content */
+  opacity: 0.35;
+}
+
+/* ─────────────────────────────────────────
+   20. HERO FLOAT IMAGE extra hover
+   (Pengertian page already has base hover)
+───────────────────────────────────────────*/
+.hero-float-image:hover {
+  filter: brightness(1.05) !important;
+}
+
+/* ─────────────────────────────────────────
+   21. WA MODAL SPRING ANIMATION
+───────────────────────────────────────────*/
+.wa-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.wa-modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+.wa-modal {
+  transition: transform 0.42s cubic-bezier(0.34,1.56,0.64,1),
+              opacity 0.3s ease;
+  transform: scale(0.92) translateY(20px);
+  opacity: 0;
+}
+.wa-modal-overlay.active .wa-modal {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────
+   22. MEMBER AVATAR RING HOVER SCALE
+───────────────────────────────────────────*/
+.creator-avatar-ring {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+.creator-card:hover .creator-avatar-ring {
+  transform: scale(1.05) rotate(2deg) !important;
+}
+
+/* ─────────────────────────────────────────
+   23. ABOUT HERO SECTION — blob drift
+   (only if .ah-blob exists)
+───────────────────────────────────────────*/
+.ah-blob {
+  animation: txBlobDrift 18s ease-in-out infinite alternate !important;
+}
+.ah-blob2 {
+  animation: txBlobDrift2 22s ease-in-out infinite alternate-reverse !important;
+}
+@keyframes txBlobDrift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(50px, 30px) scale(1.12); }
+}
+@keyframes txBlobDrift2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-40px, 55px) scale(1.18); }
+}
+
+/* ─────────────────────────────────────────
+   24. OPINION CARD QUOTE ITALIC GLOW
+───────────────────────────────────────────*/
+.opinion-card:hover .opinion-text,
+.opinion-card:hover > p {
+  color: rgba(255,255,255,0.95) !important;
+  transition: color 0.3s ease;
+}
+
+/* ─────────────────────────────────────────
+   25. SMOOTH SCROLL (redundant but safe)
+───────────────────────────────────────────*/
+html { scroll-behavior: smooth; }
+
+/* ─────────────────────────────────────────
+   26. PERMANENT GREEN BORDER ON ALL CARDS
+───────────────────────────────────────────*/
+.opinion-card, 
+.member-card, 
+.info-card, 
+.service-card, 
+.quote-card, 
+.wa-contact-item, 
+.process-block, 
+.creator-card,
+.benefit-card,
+.step-item,
+.hero-float-card {
+  border: 1px solid var(--lime, #b5e853) !important;
+  border-radius: 20px !important;
+}
+
+/* ─────────────────────────────────────────
+   27. GLOBAL MOBILE SHRINK (Semua kecil di HP)
+───────────────────────────────────────────*/
+@media (max-width: 768px) {
+  .section { padding: 2.5rem 4vw !important; }
+  .section-h { font-size: 1.6rem !important; }
+  .section-sub { font-size: 13px !important; margin-bottom: 2rem !important; }
+  
+  .opinion-card, .member-card, .info-card, .service-card, .quote-card, 
+  .wa-contact-item, .process-block, .creator-card, .benefit-card, 
+  .step-item, .def-card, .bc-front, .bc-info {
+    padding: 1rem !important;
+    min-height: auto !important;
+  }
+  
+  .opinion-card p, .member-card p, .info-card p, .service-card p, 
+  .quote-card p, .wa-contact-item p, .process-block p, .creator-card p,
+  .benefit-card p, .step-item p, .def-card p, .bc-info p {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  .opinion-card h3, .member-card h3, .info-card h3, .service-card h3, 
+  .quote-card h3, .wa-contact-item h3, .process-block h3, .creator-card h3,
+  .benefit-card h3, .step-item h3, .def-card h3 {
+    font-size: 15px !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .bc-icon, .def-icon {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 auto 0.8rem !important;
+  }
+  
+  .bc-icon svg, .def-icon svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .hero-headline { font-size: clamp(1.8rem, 8vw, 2.5rem) !important; }
+  .hero-desc { font-size: 13px !important; line-height: 1.6 !important; }
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami — Briket Kompos SMA Trinitas</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Fallback for Cabinet Grotesk -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="cara_cara pembuatan.css">
+  <!-- Global Transitions & Animations -->
+  <link rel="stylesheet" href="../transitions.css">
+</head>
+
+<body>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- ══════════════════════════
+     SIDEBAR
+══════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+
+    <div class="sidebar-brand">
+      <div>
+        <div class="sb-name" style="font-size: 22px;">Briket Kompos</div>
+        <div class="sb-sub" style="font-size: 13px;">SMA Trinitas · Bandung</div>
+      </div>
+    </div>
+
+    <p class="sb-nav-label" data-lang="id">Navigasi Utama</p>
+    <p class="sb-nav-label" data-lang="en">Main Navigation</p>
+    <ul class="sb-links">
+      <li><a href="../PENGERTIAN/Pengertian.html" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Pengertian</span><span data-lang="en">Definition</span></span>
+        </a></li>
+      <li><a href="../ABOUT/about.html" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Tentang Kami</span><span data-lang="en">About Us</span></span>
+        </a></li>
+      <li><a href="cara_cara pembuatan.html" class="active" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Cara Pembuatan</span><span data-lang="en">How It's
+              Made</span></span>
+        </a></li>
+    </ul>
+
+    <div class="sb-promo">
+      <div class="promo-icon">
+        <svg class="animated-icon leaf-icon" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+      </div>
+      <div class="promo-content">
+        <div class="promo-title">100% Eco-Friendly</div>
+        <div class="promo-desc" data-lang="id">Mendukung program Go Green.</div>
+        <div class="promo-desc" data-lang="en">Supporting Go Green program.</div>
+      </div>
+    </div>
+
+    <div class="sb-promo sdgs-box">
+      <div class="promo-icon">
+        <svg class="animated-icon target-icon" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+      </div>
+      <div class="promo-content">
+        <div class="promo-title">SDGs 12 Support</div>
+        <div class="promo-desc" data-lang="id">Konsumsi & Produksi Bertanggung Jawab.</div>
+        <div class="promo-desc" data-lang="en">Responsible Consumption & Production.</div>
+      </div>
+    </div>
+
+    <div class="sb-footer">
+      <strong>INSPIRE 2025</strong>
+      <span data-lang="id">Proyek Inovasi Sains<br>Kelompok 3 — Kelas X-2</span>
+      <span data-lang="en">Science Innovation Project<br>Group 3 — Class X-2</span>
+    </div>
+  </aside>
+
+  <!-- ══════════════════════════
+     TOPBAR
+══════════════════════════ -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-btn" onclick="openSidebar()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="../PENGERTIAN/Pengertian.html" class="topbar-brand">
+        <img src="../PROFIL/logo-trinitas.png" alt="Logo SMA Trinitas" class="topbar-logo">
+        Briket<span>Kompos</span>
+      </a>
+    </div>
+
+    <nav class="topbar-nav">
+      <a href="../PENGERTIAN/Pengertian.html#pengertian" data-lang="id">Pengertian</a>
+      <a href="../PENGERTIAN/Pengertian.html#pengertian" data-lang="en">Definition</a>
+      <a href="../ABOUT/about.html" data-lang="id">Tentang Kami</a>
+      <a href="../ABOUT/about.html" data-lang="en">About Us</a>
+      <a href="#cara-pembuatan" data-lang="id">Cara Pembuatan</a>
+      <a href="#cara-pembuatan" data-lang="en">How It's Made</a>
+    </nav>
+
+
+  </header>
+
+  <!-- ══════════════════════════
+     MAIN
+══════════════════════════ -->
+  <main>
+    <section class="section dark" id="cara-pembuatan"
+      style="background: var(--deep); min-height: calc(100vh - 64px); padding-top: 100px;">
+      <div class="fade-up"
+        style="display: flex; flex-direction: column; align-items: center; margin-bottom: 4.5rem; text-align: center;">
+        <span class="tag lime" data-lang="id">Proses Produksi</span>
+        <span class="tag lime" data-lang="en">Production Process</span>
+
+        <h2 class="section-h light" style="margin-bottom: 1rem;">
+          <span data-lang="id">Cara Pembuatan Kompos & Briket</span>
+          <span data-lang="en">Compost & Briquette Production</span>
+        </h2>
+
+        <p class="section-sub light" style="margin: 0 auto;">
+          <span data-lang="id">Panduan langkah demi langkah memproses sampah organik menjadi kompos dan briket ramah
+            lingkungan secara langsung oleh tim kami.</span>
+          <span data-lang="en">A step-by-step guide produced hands-on by our team to process organic waste into
+            eco-friendly compost and briquettes.</span>
+        </p>
+      </div>
+
+      <div class="process-container fade-up d1">
+
+        <!-- ══════════════════════════
+           1. PEMBUATAN KOMPOS
+      ══════════════════════════ -->
+        <div class="process-row">
+
+          <!-- Sisi Kiri: ALAT & BAHAN -->
+          <aside class="process-sticky-side">
+            <div class="process-block">
+              <div class="process-header" style="margin-bottom: 2rem;">
+                <h3 class="process-title" style="font-size: 2rem;">1. Persiapan Kompos</h3>
+                <div class="process-date">📅 16 Jan 2026</div>
+              </div>
+
+              <div class="tools-materials">
+                <div class="tm-col">
+                  <h4 data-lang="id">Alat</h4>
+                  <h4 data-lang="en">Tools</h4>
+                  <ul class="tm-list">
+                    <li>Bor</li>
+                    <li>Gergaji</li>
+                    <li>Amplas Grid 300</li>
+                    <li>Sekop Mini</li>
+                    <li>Gayung</li>
+                    <li>Gelas Takar</li>
+                    <li>Lidi</li>
+                  </ul>
+                </div>
+                <div class="tm-col">
+                  <h4 data-lang="id">Bahan</h4>
+                  <h4 data-lang="en">Materials</h4>
+                  <ul class="tm-list">
+                    <li>Ember (2 buah)</li>
+                    <li>Sampah Organik</li>
+                    <li>Molase</li>
+                    <li>EM4</li>
+                    <li>Sekam Bakar</li>
+                    <li>Sekam Mentah</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Sisi Kanan: LANGKAH A, B, C -->
+          <div class="process-steps-column">
+            <!-- KOMPOS: LINGKUP A -->
+            <div class="process-block">
+              <div class="steps-wrapper">
+                <h4 class="steps-title" data-lang="id">A. Mempersiapkan Wadah</h4>
+                <h4 class="steps-title" data-lang="en">A. Container Prep</h4>
+                <div class="step-item">
+                  <div class="step-num">1</div>
+                  <div class="step-text">
+                    <span data-lang="id">Lubangi bagian bawah ember yang akan berada di atas menggunakan bor.</span>
+                    <span data-lang="en">Drill many small holes at the bottom of the top bucket.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">2</div>
+                  <div class="step-text">
+                    <span data-lang="id">Lubangi bagian tengah tutup ember wadah bagian bawah menggunakan
+                      gergaji.</span>
+                    <span data-lang="en">Saw a hole in the middle of the bottom bucket's lid.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">3</div>
+                  <div class="step-text">
+                    <span data-lang="id">Tumpuk ember menjadi 2 susun (lubang bawah di bagian atas).</span>
+                    <span data-lang="en">Stack the buckets into 2 layers (drilled on top).</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KOMPOS: LINGKUP B -->
+            <div class="process-block">
+              <div class="steps-wrapper">
+                <h4 class="steps-title" data-lang="id">B. Membuat Cairan Pengurai</h4>
+                <h4 class="steps-title" data-lang="en">B. Decomposer Liquid</h4>
+                <div class="step-item">
+                  <div class="step-num">1</div>
+                  <div class="step-text">
+                    <span data-lang="id">Siapkan 1 liter air dalam gayung.</span>
+                    <span data-lang="en">Prepare 1 liter of water in a dipper.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">2</div>
+                  <div class="step-text">
+                    <span data-lang="id">Takar molase 20 ml dan EM4 15 ml.</span>
+                    <span data-lang="en">Measure 20 ml of molasses and 15 ml of EM4.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">3</div>
+                  <div class="step-text">
+                    <span data-lang="id">Campurkan dan aduk merata. Cairan siap digunakan.</span>
+                    <span data-lang="en">Mix and stir well. The liquid is ready.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KOMPOS: LINGKUP C -->
+            <div class="process-block">
+              <div class="steps-wrapper">
+                <h4 class="steps-title" data-lang="id">C. Proses Membuat Kompos</h4>
+                <h4 class="steps-title" data-lang="en">C. Composting Process</h4>
+                <div class="step-item">
+                  <div class="step-num">1</div>
+                  <div class="step-text">
+                    <span data-lang="id">Alasi dasar ember atas dengan sekam bakar setebal 2 cm.</span>
+                    <span data-lang="en">Line the bottom of the top bucket with 2cm charcoal husk.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">2</div>
+                  <div class="step-text">
+                    <span data-lang="id">Masukkan sampah organik secara merata menutupi sekam bakar.</span>
+                    <span data-lang="en">Add organic waste evenly to cover the charcoal husk layer.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">3</div>
+                  <div class="step-text">
+                    <span data-lang="id">Tutupi kembali lapisan sampah organik dengan sekam bakar setebal 2 cm.</span>
+                    <span data-lang="en">Cover the organic waste layer with another 2cm of charcoal husk.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">4</div>
+                  <div class="step-text">
+                    <span data-lang="id">Tuangkan cairan pengurai secara merata hingga permukaan terasa basah. Ulangi
+                      hingga ember penuh.</span>
+                    <span data-lang="en">Pour liquid until wet. Repeat until the bucket is full.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">5</div>
+                  <div class="step-text">
+                    <span data-lang="id">Beri lapisan teratas sekam mentah lalu siram kembali dengan cairan
+                      pengurai.</span>
+                    <span data-lang="en">Finish with a top layer of raw husk and water it with liquid.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">6</div>
+                  <div class="step-text">
+                    <span data-lang="id">Tutup rapat dan letakkan ember di tempat yang teduh.</span>
+                    <span data-lang="en">Seal tightly and store the bucket in a shaded area.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">7</div>
+                  <div class="step-text">
+                    <span data-lang="id">Tunggu 2-3 minggu hingga kompos terurai sempurna dan siap digunakan.</span>
+                    <span data-lang="en">Wait 2-3 weeks for full decomposition until ready to use.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════
+           2. PEMBUATAN BRIKET
+      ══════════════════════════ -->
+        <div class="process-row">
+
+          <!-- Sisi Kiri: ALAT & BAHAN BRIKET -->
+          <aside class="process-sticky-side">
+            <div class="process-block">
+              <div class="process-header" style="margin-bottom: 2rem;">
+                <h3 class="process-title" style="font-size: 2rem;">2. Persiapan Briket</h3>
+                <div class="process-date">📅 18 Mar 2026</div>
+              </div>
+
+              <div class="tools-materials">
+                <div class="tm-col">
+                  <h4 data-lang="id">Alat</h4>
+                  <h4 data-lang="en">Tools</h4>
+                  <ul class="tm-list">
+                    <li>Cetakan Briket</li>
+                    <li>Alat Penekan</li>
+                    <li>Nampan</li>
+                  </ul>
+                </div>
+                <div class="tm-col">
+                  <h4 data-lang="id">Bahan</h4>
+                  <h4 data-lang="en">Materials</h4>
+                  <ul class="tm-list">
+                    <li>Kompos Organik</li>
+                    <li>Tepung Tapioka</li>
+                    <li>Air</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Sisi Kanan: LANGKAH A, B, C -->
+          <div class="process-steps-column">
+            <div class="process-block">
+              <div class="steps-wrapper">
+                <h4 class="steps-title" data-lang="id">A. Persiapan Bahan</h4>
+                <h4 class="steps-title" data-lang="en">A. Material Prep</h4>
+                <div class="step-item">
+                  <div class="step-num">1</div>
+                  <div class="step-text">
+                    <span data-lang="id">Jemur kompos di bawah sinar matahari hingga kering.</span>
+                    <span data-lang="en">Sun-dry compost until dry.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">2</div>
+                  <div class="step-text">
+                    <span data-lang="id">Campurkan kompos dengan tapioka dan sedikit air.</span>
+                    <span data-lang="en">Mix with tapioca and water.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="process-block">
+              <div class="steps-wrapper">
+                <h4 class="steps-title" data-lang="id">B. Proses Pencetakan</h4>
+                <h4 class="steps-title" data-lang="en">B. Molding Process</h4>
+                <div class="step-item">
+                  <div class="step-num">3</div>
+                  <div class="step-text">
+                    <span data-lang="id">Masukkan campuran ke dalam cetakan hingga padat.</span>
+                    <span data-lang="en">Pack mixture firmly into molds.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">4</div>
+                  <div class="step-text">
+                    <span data-lang="id">Tekan briket menggunakan alat penekan selama sekitar 3 menit.</span>
+                    <span data-lang="en">Press the briquette using the press tool for about 3 minutes.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">5</div>
+                  <div class="step-text">
+                    <span data-lang="id">Keluarkan hasil cetakan dan jemur di bawah sinar matahari selama 3-4
+                      jam.</span>
+                    <span data-lang="en">Unmold and sun-dry them for 3-4 hours.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="process-block">
+              <div class="steps-wrapper">
+                <h4 class="steps-title" data-lang="id">C. Penyelesaian</h4>
+                <h4 class="steps-title" data-lang="en">C. Finishing</h4>
+                <div class="step-item">
+                  <div class="step-num">6</div>
+                  <div class="step-text">
+                    <span data-lang="id">Ulangi langkah pencetakan hingga seluruh campuran briket habis.</span>
+                    <span data-lang="en">Repeat molding steps until all briquette mixtures are used.</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-num">7</div>
+                  <div class="step-text">
+                    <span data-lang="id">Setelah benar-benar kering, briket siap dikemas dan digunakan!</span>
+                    <span data-lang="en">Once completely dry, briquettes are ready to pack and use!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════
+       FOOTER
+  ══════════════════════════ -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col branding-col">
+        <div class="footer-logo">Briket<span>Kompos</span></div>
+        <p class="footer-desc">
+          Inovasi pupuk organik berkelanjutan dari limbah sekolah untuk bumi yang lebih hijau. Karya siswa SMA Trinitas
+          Bandung melalui program INSPIRE 2025.
+        </p>
+        <div style="display: flex; gap: 15px;">
+          <a href="#"
+            style="color: var(--lime); text-decoration: none; font-weight: 700; font-size: 0.9rem;">Instagram</a>
+          <a href="#"
+            style="color: var(--lime); text-decoration: none; font-weight: 700; font-size: 0.9rem;">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="../PENGERTIAN/Pengertian.html#pengertian">Apa itu Briket?</a></li>
+          <li><a href="../PENGERTIAN/Pengertian.html#kelebihan">Keunggulan</a></li>
+          <li><a href="../PENGERTIAN/Pengertian.html#dokumentasi">Galeri Proses</a></li>
+          <li><a href="../ABOUT/about.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>
+          <strong>SMA Trinitas Bandung</strong><br>
+          Jl. Kebon Jati No.209<br>
+          Bandung, Jawa Barat<br><br>
+          <span style="color: var(--lime);">Kelompok 3 — X-2</span>
+        </p>
+      </div>
+
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 BriketKompos · SMA Trinitas Bandung · All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cara_cara pembuatan.js"></script>
+  <!-- Global Transitions & Animations Script -->
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

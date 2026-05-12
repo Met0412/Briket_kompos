@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <!-- Metadata standar untuk karakter dan viewport (agar responsif) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami — Briket Kompos SMA Trinitas</title>
+
+  <!-- Mengimpor font dari Google Fonts (Playfair Display & Cabinet Grotesk) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font cadangan jika Cabinet Grotesk tidak termuat -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- File CSS eksternal khusus untuk halaman About -->
+  <link rel="stylesheet" href="about.css">
+  <!-- Global Transitions & Animations -->
+  <link rel="stylesheet" href="../transitions.css">
+</head>
+
+<body>
+
+  <!-- MODAL WHATSAPP: Muncul saat tombol hubungi diklik -->
+  <div class="wa-modal-overlay" id="waModalOverlay" onclick="closeWaModal(event)">
+    <div class="wa-modal" id="waModal" role="dialog" aria-modal="true" aria-labelledby="waModalTitle">
+      <!-- Bagian Atas Modal (Header) -->
+      <div class="wa-modal-header">
+        <div class="wa-modal-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+        </div>
+        <div>
+          <h3 id="waModalTitle" class="wa-modal-title">Sebelum Chat ke Penjual</h3>
+          <p class="wa-modal-subtitle">Harap baca informasi berikut terlebih dahulu</p>
+        </div>
+        <button class="wa-modal-close" onclick="closeWaModalDirect()" aria-label="Tutup">&times;</button>
+      </div>
+
+      <!-- Kotak Peringatan/Disclaimer -->
+      <div class="wa-disclaimer">
+        <div class="wa-disclaimer-icon">⚠️</div>
+        <div>
+          <p class="wa-disclaimer-title">Perhatian</p>
+          <p class="wa-disclaimer-text">Ini adalah produk inovasi siswa SMA Trinitas Bandung dalam program INSPIRE 2025.
+            Penjualan bersifat terbatas dan ditujukan untuk keperluan edukasi serta lingkungan.</p>
+        </div>
+      </div>
+
+      <!-- Info Penjual (Profil Singkat) -->
+      <div class="wa-seller-info">
+        <div class="wa-seller-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </div>
+        <div class="wa-seller-details">
+          <div class="wa-seller-name">Tim Briket Kompos</div>
+          <div class="wa-seller-role">Penjual Produk · SMA Trinitas Bandung</div>
+        </div>
+        <div class="wa-seller-status">
+          <span class="wa-online-dot"></span>
+          Aktif
+        </div>
+      </div>
+
+      <!-- Info List -->
+      <ul class="wa-info-list">
+        <li>💬 Anda akan diarahkan ke aplikasi WhatsApp</li>
+        <li>📦 Stok produk terbatas — tanyakan ketersediaan terlebih dahulu</li>
+        <li>🕐 Jam respons: Senin–Sabtu, 08.00–17.00 WIB</li>
+      </ul>
+
+      <!-- Daftar kontak person (Hubungi ke nomor tertentu) -->
+      <div class="wa-contacts-grid">
+        <a href="https://wa.me/6285295686969?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Briket%20Kompos%20dari%20SMA%20Trinitas%20Bandung.%20Apakah%20masih%20tersedia%3F"
+          target="_blank" class="wa-contact-item" onclick="closeWaModalDirect()">
+          <span class="wa-contact-icon">📱</span>
+          <div>
+            <div class="wa-contact-name">Matthew</div>
+            <div class="wa-contact-num">0852 9568 6969</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="margin-left:auto; color:#25D366;">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/6281802353729?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Briket%20Kompos%20dari%20SMA%20Trinitas%20Bandung.%20Apakah%20masih%20tersedia%3F"
+          target="_blank" class="wa-contact-item" onclick="closeWaModalDirect()">
+          <span class="wa-contact-icon">📱</span>
+          <div>
+            <div class="wa-contact-name">Jason</div>
+            <div class="wa-contact-num">0818 0235 3729</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="margin-left:auto; color:#25D366;">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/6281223763598?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Briket%20Kompos%20dari%20SMA%20Trinitas%20Bandung.%20Apakah%20masih%20tersedia%3F"
+          target="_blank" class="wa-contact-item" onclick="closeWaModalDirect()">
+          <span class="wa-contact-icon">📱</span>
+          <div>
+            <div class="wa-contact-name">Evert</div>
+            <div class="wa-contact-num">0812 2376 3598</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="margin-left:auto; color:#25D366;">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/6281212694501?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Briket%20Kompos%20dari%20SMA%20Trinitas%20Bandung.%20Apakah%20masih%20tersedia%3F"
+          target="_blank" class="wa-contact-item" onclick="closeWaModalDirect()">
+          <span class="wa-contact-icon">📱</span>
+          <div>
+            <div class="wa-contact-name">Tiara</div>
+            <div class="wa-contact-num">0812 1269 4501</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="margin-left:auto; color:#25D366;">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Cancel Button -->
+      <div class="wa-modal-actions">
+        <button class="wa-btn-cancel" onclick="closeWaModalDirect()">Batal / Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR ATAS (NAVIGASI) -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <!-- Tombol Menu untuk membuka Sidebar -->
+      <button class="menu-btn" onclick="openSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- Logo dan Nama Brand -->
+      <a href="../PENGERTIAN/Pengertian.html" class="topbar-brand">
+        <img src="../PROFIL/logo-trinitas.png" alt="Logo SMA Trinitas" class="topbar-logo">
+        Briket<span>Kompos</span>
+      </a>
+    </div>
+
+    <!-- Link Navigasi Cepat (ID/EN) -->
+    <nav class="topbar-nav">
+      <a href="#about" id="nav-about" data-lang="id">Tujuan</a>
+      <a href="#about" id="nav-about-en" data-lang="en">Goal</a>
+      <a href="#contact" id="nav-contact" data-lang="id">Via Whatsapp</a>
+      <a href="#contact" id="nav-contact-en" data-lang="en">Via Whatsapp</a>
+    </nav>
+  </header>
+
+  <!-- Overlay hitam saat Sidebar dibuka -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR (Menu Samping) -->
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+
+    <div class="sidebar-brand">
+      <div>
+        <div class="sb-name" style="font-size: 22px;">Briket Kompos</div>
+        <div class="sb-sub" style="font-size: 13px;">SMA Trinitas · Bandung</div>
+      </div>
+    </div>
+
+    <p class="sb-nav-label" data-lang="id">Navigasi Utama</p>
+    <p class="sb-nav-label" data-lang="en">Main Navigation</p>
+    <ul class="sb-links">
+      <!-- Link ke halaman Pengertian -->
+      <li><a href="../PENGERTIAN/Pengertian.html" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Pengertian</span><span data-lang="en">Definition</span></span>
+        </a></li>
+      <!-- Link ke halaman About (Aktif) -->
+      <li><a href="about.html" class="active" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Tentang Kami</span><span data-lang="en">About Us</span></span>
+        </a></li>
+      <!-- Link ke halaman Cara Pembuatan -->
+      <li><a href="../CARA_PEMBUATAN/cara_cara pembuatan.html" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Cara Pembuatan</span><span data-lang="en">How It's
+              Made</span></span>
+        </a></li>
+    </ul>
+
+    <!-- Kotak Promo/Info tambahan di Sidebar -->
+    <div class="sb-promo">
+      <div class="promo-icon">
+        <svg class="animated-icon leaf-icon" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+      </div>
+      <div class="promo-content">
+        <div class="promo-title">100% Eco-Friendly</div>
+        <div class="promo-desc" data-lang="id">Mendukung program Go Green.</div>
+        <div class="promo-desc" data-lang="en">Supporting Go Green program.</div>
+      </div>
+    </div>
+
+    <!-- Info SDGs di Sidebar -->
+    <div class="sb-promo sdgs-box">
+      <div class="promo-icon">
+        <svg class="animated-icon target-icon" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+      </div>
+      <div class="promo-content">
+        <div class="promo-title">SDGs 12 Support</div>
+        <div class="promo-desc" data-lang="id">Konsumsi & Produksi Bertanggung Jawab.</div>
+        <div class="promo-desc" data-lang="en">Responsible Consumption & Production.</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- SECTION HERO: Header Utama Halaman -->
+    <section class="about-hero" id="about">
+      <div class="about-hero-mesh">
+        <div class="ah-blob ah-blob1"></div>
+        <div class="ah-blob ah-blob2"></div>
+      </div>
+      <div class="about-hero-inner">
+        <!-- Badge Atas -->
+        <div class="ah-eyebrow hero-enter" style="animation-delay:0s">
+          <span class="ah-dot"></span>
+          <span data-lang="id">Proyek INSPIRE 2025 · SMA Trinitas Bandung</span>
+          <span data-lang="en">INSPIRE 2025 Project · SMA Trinitas Bandung</span>
+        </div>
+        <!-- Judul Besar -->
+        <h1 class="ah-title hero-enter" style="animation-delay:0.12s">
+          <span data-lang="id">Tentang<em> Kami</em></span>
+          <span data-lang="en">About<em> Us</em></span>
+        </h1>
+        <!-- Deskripsi Tim -->
+        <p class="ah-desc hero-enter" style="animation-delay:0.22s" data-lang="id">
+          Kami adalah Kelompok 3 dari kelas X-2 SMA Trinitas Bandung. Melalui proyek INSPIRE 2025,
+          kami mengolah sampah organik menjadi briket kompos yang bermanfaat sebagai pupuk alami.
+        </p>
+        <p class="ah-desc hero-enter" style="animation-delay:0.22s" data-lang="en">
+          We are Group 3 from class X-2 of SMA Trinitas Bandung. Through the INSPIRE 2025 project,
+          we process organic waste into compost briquettes as natural fertilizers.
+        </p>
+        <!-- Statistik Ringkas -->
+        <div class="ah-stats hero-enter" style="animation-delay:0.34s">
+          <div class="ah-stat">
+            <div class="ah-stat-num">4</div>
+            <div class="ah-stat-label" data-lang="id">Anggota Tim</div>
+            <div class="ah-stat-label" data-lang="en">Team Members</div>
+          </div>
+          <div class="ah-stat-div"></div>
+          <div class="ah-stat">
+            <div class="ah-stat-num">2025</div>
+            <div class="ah-stat-label">INSPIRE</div>
+          </div>
+          <div class="ah-stat-div"></div>
+          <div class="ah-stat">
+            <div class="ah-stat-num">X-2</div>
+            <div class="ah-stat-label" data-lang="id">Kelas</div>
+            <div class="ah-stat-label" data-lang="en">Class</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TIM: Daftar Anggota Kelompok -->
+    <section class="section" style="background: var(--forest); padding-top: 7rem; padding-bottom: 7rem;">
+      <div class="about-section-header sa-fade sa-up">
+        <span class="tag lime" data-lang="id">Tim Kami</span>
+        <span class="tag lime" data-lang="en">Our Team</span>
+        <h2 class="section-h light center-line" style="margin-top:1rem; margin-bottom:1.2rem;">
+          <span data-lang="id">Anggota Kelompok</span>
+          <span data-lang="en">Group Members</span>
+        </h2>
+        <p class="about-section-desc" data-lang="id">Empat siswa yang berdedikasi membawa inovasi briket kompos dari
+          konsep hingga kenyataan.</p>
+        <p class="about-section-desc" data-lang="en">Four dedicated students bringing the compost briquette innovation
+          from concept to reality.</p>
+      </div>
+
+      <!-- Grid 2x2 untuk kartu anggota tim -->
+      <div class="team-grid-2x2">
+        <div class="member-card sa-fade sa-up" style="transition-delay:0.1s">
+          <div class="member-avatar"><img src="../PROFIL/tiara.jpeg" alt="Tiara"></div>
+          <div style="flex:1">
+            <div class="member-name">Angelia Tiara Putri</div>
+            <div class="member-id">X-2 / 01 — Tim Riset</div>
+            <div class="member-bio">
+              <ul style="padding-left:15px">
+                <li>Membuat dan Mencari sumber data riset</li>
+                <li>Membuat pengertian dan isi yang jelas di Google Docs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="member-card sa-fade sa-up" style="transition-delay:0.2s">
+          <div class="member-avatar"><img src="../PROFIL/jason-avatar.jpg" alt="Jason"></div>
+          <div style="flex:1">
+            <div class="member-name">Jason Kurniawan</div>
+            <div class="member-id">X-2 / 11 — Tim Produksi</div>
+            <div class="member-bio">
+              <ul style="padding-left:15px">
+                <li>Eksekutor lapangan yang efisien</li>
+                <li>Memastikan cetakan briket padat dan siap pakai</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="member-card sa-fade sa-up" style="transition-delay:0.3s">
+          <div class="member-avatar"><img src="../PROFIL/matthew.jpg" alt="Keith Matthew Handra"></div>
+          <div style="flex:1">
+            <div class="member-name">Keith Matthew Handra</div>
+            <div class="member-id">X-2 / 16 — Tim Dokumentasi &amp; Desain</div>
+            <div class="member-bio">
+              <ul style="padding-left:15px">
+                <li>Pengarah desain visual website</li>
+                <li>Mempresentasikan ide ke medium interaktif digital</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="member-card sa-fade sa-up" style="transition-delay:0.4s">
+          <div class="member-avatar"><img src="../PROFIL/evert.jpeg" alt="Evert"></div>
+          <div style="flex:1">
+            <div class="member-name">Timothy Evert K. Riwu</div>
+            <div class="member-id">X-2 / 27 — Tim Riset</div>
+            <div class="member-bio">
+              <ul style="padding-left:15px">
+                <li>Pemikir strategis inovasi produk</li>
+                <li>Memelopori fungsi penyerapan slow-release pada briket</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION OPINI: Pendapat masing-masing anggota -->
+    <section class="section"
+      style="background: var(--deep); border-top: 1px solid rgba(181,232,83,0.05); padding-top:6rem; padding-bottom:6rem;">
+      <div class="sa-fade sa-up" style="text-align:center; margin-bottom:5rem">
+        <span class="tag lime">Opini Tim</span>
+        <h2 class="section-h light center-line">Mengapa Memilih Briket Kompos?</h2>
+        <p class="section-sub light" style="margin:0 auto; text-align:center; max-width:600px">
+          Inilah pendapat dari tim kami mengenai keunggulan briket kompos sebagai solusi pupuk masa depan.
+        </p>
+      </div>
+      <!-- Grid kartu opini -->
+      <div class="opinion-grid">
+        <div class="opinion-card sa-fade sa-up" style="transition-delay:0.1s">
+          <p class="opinion-text">"Menurut saya, briket kompos ini sangat revolusioner karena bisa mengurangi bau sampah
+            organik di sekolah dan lebih mudah dikemas secara rapi."</p>
+          <div class="opinion-author">
+            <div class="opinion-avatar"><img src="../PROFIL/tiara.jpeg" alt="Tiara"></div>
+            <div class="opinion-info">
+              <div class="opinion-name">Angelia Tiara</div>
+              <div class="opinion-role">Tim Riset</div>
+            </div>
+          </div>
+        </div>
+        <div class="opinion-card sa-fade sa-up" style="transition-delay:0.2s">
+          <p class="opinion-text">"Bentuknya yang padat membuat nutrisi di dalamnya tidak mudah luntur saat penyiraman,
+            sehingga tanaman mendapatkan pupuk secara bertahap."</p>
+          <div class="opinion-author">
+            <div class="opinion-avatar"><img src="../PROFIL/jason-avatar.jpg" alt="Jason"></div>
+            <div class="opinion-info">
+              <div class="opinion-name">Jason Kurniawan</div>
+              <div class="opinion-role">Tim Produksi</div>
+            </div>
+          </div>
+        </div>
+        <div class="opinion-card sa-fade sa-up" style="transition-delay:0.3s">
+          <p class="opinion-text">"Inovasi ini mendukung gerakan Zero Waste di SMA Trinitas. Dari siswa, oleh siswa, dan
+            untuk bumi yang lebih hijau."</p>
+          <div class="opinion-author">
+            <div class="opinion-avatar"><img src="../PROFIL/evert.jpeg" alt="Evert"></div>
+            <div class="opinion-info">
+              <div class="opinion-name">Timothy Evert</div>
+              <div class="opinion-role">Tim Riset</div>
+            </div>
+          </div>
+        </div>
+        <div class="opinion-card sa-fade sa-up" style="transition-delay:0.4s">
+          <p class="opinion-text">"Dengan briket kompos, kita tidak perlu repot lagi menggali tanah. Cukup letakkan dan
+            briket akan menyuburkan tanaman."</p>
+          <div class="opinion-author">
+            <div class="opinion-avatar"><img src="../PROFIL/matthew.jpg" alt="Matthew"></div>
+            <div class="opinion-info">
+              <div class="opinion-name">Keith Matthew</div>
+              <div class="opinion-role">Tim Dokumentasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION PROFIL CREATOR: Profil pembuat website -->
+    <section class="profile-section">
+      <div class="profile-layout">
+        <div class="creator-card sa-fade sa-left">
+          <div class="creator-avatar-ring">
+            <img src="../PROFIL/matthew.jpg" alt="Keith Matthew Handra" class="creator-avatar" />
+          </div>
+          <div class="creator-name">Keith Matthew Handra</div>
+          <div class="creator-role">Pelajar · Web Creator</div>
+          <div class="creator-badges">
+            <span class="creator-badge">🎓 SMA</span>
+            <span class="creator-badge">💻 Self-taught</span>
+            <span class="creator-badge">🇮🇩 Indonesia</span>
+          </div>
+          <!-- Kolom Bio dan Media Sosial -->
+          <div class="creator-bio sa-fade sa-up" style="transition-delay:0.2s">
+            Halo! Saya Keith, pelajar yang memiliki ketertarikan pada desain web dan teknologi.
+            Website ini saya bangun untuk mempresentasikan inovasi <strong>Briket Kompos</strong> kami,
+            sebuah solusi berkelanjutan untuk mengolah limbah organik menjadi produk yang bermanfaat dan ramah
+            lingkungan.
+          </div>
+          <!-- Tombol Hubungi/Media Sosial -->
+          <div class="connect-section sa-fade sa-up" style="transition-delay:0.3s">
+            <div class="connect-label-container">
+              <div class="connect-line"></div>
+              <span class="connect-label">Connect With Me</span>
+            </div>
+            <div class="connect-grid">
+              <a href="https://instagram.com/metu0412" target="_blank" class="connect-card">
+                <div class="connect-icon insta-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  </svg>
+                </div>
+                <div class="connect-info"><span class="connect-platform">Instagram</span><span
+                    class="connect-username">@metu0412</span></div>
+              </a>
+              <a href="https://tiktok.com/@Metu_KH" target="_blank" class="connect-card">
+                <div class="connect-icon tiktok-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68a6.34 6.34 0 006.33 6.32 6.34 6.34 0 006.27-5.32v-6.6a8.45 8.45 0 005 1.58V8.21a5.05 5.05 0 01-3.01-1.52z" />
+                  </svg>
+                </div>
+                <div class="connect-info"><span class="connect-platform">Tiktok</span><span
+                    class="connect-username">Metu_KH</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Informasi Tambahan (Kenapa, Teknologi, Layanan) -->
+        <div class="about-info-col" id="purpose">
+          <!-- Kartu Tujuan Proyek -->
+          <div class="info-card sa-fade sa-right" style="transition-delay:0.1s">
+            <div class="info-label">
+              <span data-lang="id">Tentang Proyek</span>
+              <span data-lang="en">About Project</span>
+            </div>
+            <h2 class="info-title">
+              <span data-lang="id">Mengapa Website Ini Dibuat?</span>
+              <span data-lang="en">Why Build This Website?</span>
+            </h2>
+            <p class="info-desc" data-lang="id">Website ini lahir dari keinginan untuk membuat materi pengolahan limbah
+              organik, khususnya Briket Kompos, menjadi lebih mudah dipahami dan tidak membosankan. Dengan desain modern
+              dan interaktif, diharapkan proses belajar menciptakan energi alternatif jadi pengalaman yang menyenangkan.
+            <p class="info-desc" data-lang="en">This website was born out of a desire to make Indonesian learning
+              materials, specifically <em>Procedure Text</em>, easier to understand and less boring. With a modern and
+              interactive design, learning becomes a fun experience.</p>
+          </div>
+          <!-- Kartu Teknologi (Tech Stack) -->
+          <div class="info-card sa-fade sa-right" style="transition-delay:0.2s">
+            <div class="info-label">
+              <span data-lang="id">Teknologi</span>
+              <span data-lang="en">Technology</span>
+            </div>
+            <h2 class="info-title">
+              <span data-lang="id">Dibangun Dengan</span>
+              <span data-lang="en">Built With</span>
+            </h2>
+            <!-- Ikon-ikon teknologi yang digunakan -->
+            <div class="tech-stack">
+              <div class="tech-item sa-fade sa-zoom" style="transition-delay:0.3s"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  alt="HTML5" /><span>HTML5</span></div>
+              <div class="tech-item sa-fade sa-zoom" style="transition-delay:0.35s"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  alt="CSS3" /><span>CSS3</span></div>
+              <div class="tech-item sa-fade sa-zoom" style="transition-delay:0.4s"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt="JavaScript" /><span>JavaScript</span></div>
+              <div class="tech-item sa-fade sa-zoom" style="transition-delay:0.45s"><img
+                  src="../PROFIL/google_fonts.png" alt="Google Fonts" /><span>Google Fonts</span></div>
+              <div class="tech-item sa-fade sa-zoom" style="transition-delay:0.5s"><img src="../PROFIL/svg_icons.png"
+                  alt="SVG Icons" /><span>SVG Icons</span></div>
+              <div class="tech-item sa-fade sa-zoom" style="transition-delay:0.55s"><img src="../PROFIL/devicon.png"
+                  alt="Devicon" /><span>Devicon</span></div>
+            </div>
+          </div>
+          <!-- Kartu Layanan (Expertise) -->
+          <div class="info-card sa-fade sa-right" style="transition-delay:0.3s">
+            <div class="info-label">
+              <span data-lang="id">Keahlian</span>
+              <span data-lang="en">Expertise</span>
+            </div>
+            <h2 class="info-title" style="text-align:center">
+              <span data-lang="id">Layanan Saya</span>
+              <span data-lang="en">My Services</span>
+            </h2>
+            <!-- Grid Layanan -->
+            <div class="services-grid">
+              <div class="service-card sa-fade sa-up" style="transition-delay:0.4s">
+                <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                  </svg></div>
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-desc" data-lang="id">Membangun website responsif dan cepat menggunakan framework
+                  terbaru.</p>
+                <p class="service-desc" data-lang="en">Crafting high-performance, responsive websites using the latest
+                  frameworks.</p>
+                <div class="service-badges"><span class="s-badge">React</span><span class="s-badge">Next.js</span><span
+                    class="s-badge">Deployment</span></div>
+              </div>
+              <div class="service-card sa-fade sa-up" style="transition-delay:0.5s">
+                <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                    <path d="M2 2l7.586 7.586" />
+                    <circle cx="11" cy="11" r="2" />
+                  </svg></div>
+                <h3 class="service-title">UI/UX Designer</h3>
+                <p class="service-desc" data-lang="id">Mendesain antarmuka yang intuitif dengan fokus pada pengalaman
+                  pengguna.</p>
+                <p class="service-desc" data-lang="en">Designing intuitive user interfaces that focus on seamless user
+                  experience.</p>
+                <div class="service-badges"><span class="s-badge">Figma</span><span class="s-badge">Canva</span><span
+                    class="s-badge">Elementor</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- SECTION INSPIRE DOCS: Link ke Google Docs Laporan -->
+  <section class="inspire-docs-section" id="inspire-doc">
+    <div class="idoc-bg-glow"></div>
+    <div class="idoc-inner reveal reveal-up">
+
+      <!-- Floating badge -->
+      <div class="idoc-badge">
+        <span class="idoc-badge-dot"></span>
+        <span data-lang="id">Dokumen Resmi · INSPIRE 2025</span>
+        <span data-lang="en">Official Document · INSPIRE 2025</span>
+      </div>
+
+      <!-- Headline -->
+      <h2 class="idoc-title">
+        <span data-lang="id">Baca Laporan <em>Lengkap Kami</em></span>
+        <span data-lang="en">Read Our <em>Full Report</em></span>
+      </h2>
+
+      <!-- Subtitle -->
+      <p class="idoc-sub" data-lang="id">
+        Seluruh dokumentasi riset, metode, hasil uji, dan analisis proyek Briket Kompos tersedia dalam dokumen resmi
+        INSPIRE 2025 kami di Google Docs.
+      </p>
+      <p class="idoc-sub" data-lang="en">
+        All research documentation, methodology, test results, and analysis of our Compost Briquette project are
+        available in our official INSPIRE 2025 Google Docs report.
+      </p>
+
+      <!-- Doc card + CTA -->
+      <div class="idoc-card-row">
+
+        <!-- Preview card -->
+        <div class="idoc-doc-card">
+          <div class="idoc-doc-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                stroke="#b5e853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14 2V8H20" stroke="#b5e853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 13H8" stroke="#b5e853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 17H8" stroke="#b5e853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10 9H9H8" stroke="#b5e853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="idoc-doc-info">
+            <div class="idoc-doc-title" data-lang="id">Laporan Proyek Briket Kompos</div>
+            <div class="idoc-doc-title" data-lang="en">Compost Briquette Project Report</div>
+            <div class="idoc-doc-meta">Google Docs · INSPIRE 2025 · Kelompok 3</div>
+          </div>
+          <div class="idoc-gdocs-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 2C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2H6Z" fill="#4285F4" />
+              <path d="M14 2V8H20L14 2Z" fill="#9FC1F8" />
+              <path d="M8 13H16V14.5H8V13ZM8 16H14V17.5H8V16Z" fill="white" />
+            </svg>
+            <span>Docs</span>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="https://docs.google.com/document/d/12CHFJIOZdgptSYjhWTIiCEWoHc-gF7fwL5jdJHN5N1g/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer" class="idoc-btn" id="inspire-docs-btn">
+          <span class="idoc-btn-shimmer"></span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15 3H21V9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M10 14L21 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span data-lang="id">Buka Dokumen</span>
+          <span data-lang="en">Open Document</span>
+        </a>
+      </div>
+
+      <!-- Statistik Ringkas di bagian dokumen -->
+      <div class="idoc-stats">
+        <div class="idoc-stat">
+          <div class="idoc-stat-num">2</div>
+          <div class="idoc-stat-label" data-lang="id">Fase Produksi</div>
+          <div class="idoc-stat-label" data-lang="en">Production Phases</div>
+        </div>
+        <div class="idoc-stat-divider"></div>
+        <div class="idoc-stat">
+          <div class="idoc-stat-num">4</div>
+          <div class="idoc-stat-label" data-lang="id">Anggota Tim</div>
+          <div class="idoc-stat-label" data-lang="en">Team Members</div>
+        </div>
+        <div class="idoc-stat-divider"></div>
+        <div class="idoc-stat">
+          <div class="idoc-stat-num">2025</div>
+          <div class="idoc-stat-label">INSPIRE</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    /* ══════════════════════════════════════
+       INSPIRE DOCS SECTION
+    ══════════════════════════════════════ */
+    .inspire-docs-section {
+      position: relative;
+      background: var(--forest);
+      padding: 7rem 5vw;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Glowing blob behind */
+    .idoc-bg-glow {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(181, 232, 83, 0.08) 0%, transparent 65%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .idoc-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    /* Badge */
+    .idoc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(181, 232, 83, 0.1);
+      border: 1px solid rgba(181, 232, 83, 0.25);
+      color: var(--lime);
+      padding: 6px 18px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .idoc-badge-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--lime);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    /* Title */
+    .idoc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5.5vw, 4.5rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .idoc-title em {
+      font-style: italic;
+      color: var(--lime);
+      display: inline;
+    }
+
+    /* Subtitle */
+    .idoc-sub {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.8;
+      max-width: 580px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* Card row */
+    .idoc-card-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    /* Document preview card */
+    .idoc-doc-card {
+      flex: 1;
+      min-width: 260px;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(181, 232, 83, 0.18);
+      border-radius: 18px;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .idoc-doc-card:hover {
+      border-color: rgba(181, 232, 83, 0.4);
+      background: rgba(181, 232, 83, 0.05);
+    }
+
+    /* Animated top border on card */
+    .idoc-doc-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--lime), transparent);
+      animation: scanLine 3s ease-in-out infinite;
+    }
+
+    @keyframes scanLine {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0.6;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(100%);
+        opacity: 0.6;
+      }
+    }
+
+    .idoc-doc-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(181, 232, 83, 0.1);
+      border: 1px solid rgba(181, 232, 83, 0.2);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .idoc-doc-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .idoc-doc-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .idoc-doc-meta {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.35);
+      font-weight: 500;
+    }
+
+    .idoc-gdocs-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      flex-shrink: 0;
+    }
+
+    .idoc-gdocs-logo span {
+      font-size: 10px;
+      color: #4285F4;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    /* CTA Button */
+    .idoc-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--lime);
+      color: var(--forest);
+      padding: 16px 32px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease;
+      box-shadow: 0 8px 30px rgba(181, 232, 83, 0.3);
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .idoc-btn-shimmer {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: shimmer 2.5s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -100%;
+      }
+
+      60% {
+        left: 100%;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+    .idoc-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(181, 232, 83, 0.45);
+    }
+
+    /* Stats row */
+    .idoc-stats {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      padding: 1.8rem 3rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      margin-top: 0.5rem;
+    }
+
+    .idoc-stat {
+      text-align: center;
+    }
+
+    .idoc-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--lime);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .idoc-stat-label {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.35);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .idoc-stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .idoc-title {
+        white-space: normal;
+      }
+
+      .idoc-card-row {
+        flex-direction: column;
+      }
+
+      .idoc-doc-card {
+        max-width: 100%;
+      }
+
+      .idoc-stats {
+        gap: 1.5rem;
+        padding: 1.4rem 1.8rem;
+      }
+
+      .idoc-stat-num {
+        font-size: 1.8rem;
+      }
+
+      .inspire-docs-section {
+        padding: 5rem 5vw;
+      }
+    }
+  </style>
+
+  <!-- ── CTA SECTION ── -->
+  <section class="cta-section" id="contact" style="background: var(--forest); padding: 5rem 0;">
+    <div class="cta-container reveal reveal-zoom">
+      <h2 class="cta-title">Tertarik dengan produk kami?</h2>
+      <p class="cta-desc">Dapatkan briket kompos kualitas terbaik untuk tanaman Anda atau tanyakan lebih lanjut mengenai
+        proyek inovasi kami.</p>
+      <button onclick="openWaModal()" class="wa-btn reveal reveal-up d-200"
+        style="margin-bottom: 2rem; border: none; cursor: pointer; font-family: inherit;">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12.031 6.172c-2.31 0-4.428 1.45-5.288 3.618-.86 2.169-.426 4.54 1.082 6.27l-.608 2.224 2.278-.598c1.614.863 3.548.835 5.138-.073 1.59-.908 2.622-2.585 2.684-4.421a5.626 5.626 0 00-5.286-5.021zM20.52 3.449C18.24 1.245 15.24 0 12.045 0c-6.11 0-11.089 4.978-11.089 11.088 0 2.112.553 4.14 1.583 5.925L0 24l7.15-1.876a11.134 11.134 0 005.31 1.34h.01c6.103 0 11.086-4.978 11.086-11.088 0-3.132-1.21-5.917-3.415-8.136zM11.964 21.01h-.01a9.171 9.171 0 01-4.32-1.09l-.312-.18-3.21.84.854-3.125-.198-.314a9.11 9.11 0 01-1.39-4.832c0-5.044 4.103-9.148 9.15-9.148 2.446 0 4.745.952 6.471 2.68 1.727 1.73 2.678 4.027 2.678 6.474a9.155 9.155 0 01-9.143 9.145z" />
+        </svg>
+        Hubungkan Via WhatsApp
+      </button>
+      <p style="color: rgba(255,255,255,0.4); font-size: 12px; margin-bottom: 1.5rem;">Klik tombol di atas untuk melihat
+        pilihan kontak &amp; info sebelum menghubungi</p>
+    </div>
+  </section>
+
+  <!-- FOOTER HALAMAN -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Kolom Branding -->
+      <div class="footer-col branding-col">
+        <div class="footer-logo">Briket<span>Kompos</span></div>
+        <p class="footer-desc">
+          Inovasi pupuk organik berkelanjutan dari limbah sekolah untuk bumi yang lebih hijau. Karya siswa SMA Trinitas
+          Bandung melalui program INSPIRE 2025.
+        </p>
+      </div>
+
+      <!-- Kolom Navigasi -->
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="../PENGERTIAN/Pengertian.html">Beranda</a></li>
+          <li><a href="#about">Tujuan</a></li>
+          <li><a href="../CARA_PEMBUATAN/cara_cara pembuatan.html">Proses</a></li>
+          <li><a href="#purpose">Tentang Proyek</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom Sosial Media -->
+      <div class="footer-col">
+        <h4>Sosial Media</h4>
+        <ul class="footer-social-links">
+          <li><a href="https://instagram.com/metu0412" target="_blank">Instagram</a></li>
+          <li><a href="https://tiktok.com/@Metu_KH" target="_blank">TikTok</a></li>
+        </ul>
+      </div>
+
+      <!-- Bagian paling bawah footer (Copyright) -->
+      <div class="footer-bottom">
+        <p>© 2025 BriketKompos · SMA Trinitas Bandung · All Rights Reserved.</p>
+      </div>
+  </footer>
+
+  <!-- SKRIP JAVASCRIPT: Logika Interaksi Halaman -->
+
+  <!-- Memanggil file script eksternal (untuk Sidebar, Language Switcher, dll) -->
+  <script src="about.js"></script>
+
+  <script>
+    // Fungsi untuk membuka Modal WhatsApp
+    function openWaModal() {
+      const overlay = document.getElementById('waModalOverlay');
+      overlay.classList.add('active'); // Menampilkan overlay
+      document.body.style.overflow = 'hidden'; // Mengunci scroll halaman saat modal buka
+    }
+
+    // Fungsi untuk menutup modal jika area luar (overlay) diklik
+    function closeWaModal(e) {
+      if (e.target === document.getElementById('waModalOverlay')) {
+        closeWaModalDirect();
+      }
+    }
+
+    // Fungsi inti untuk menghilangkan modal
+    function closeWaModalDirect() {
+      document.getElementById('waModalOverlay').classList.remove('active');
+      document.body.style.overflow = ''; // Mengaktifkan kembali scroll halaman
+    }
+
+    // Menutup modal secara otomatis jika tombol 'Escape' di keyboard ditekan
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeWaModalDirect();
+    });
+  </script>
+  <!-- Global Transitions & Animations Script -->
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briket Kompos — SMA Trinitas</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Fallback for Cabinet Grotesk -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet halaman -->
+  <link rel="stylesheet" href="Pengertian.css">
+  <!-- Global Transitions & Animations -->
+  <link rel="stylesheet" href="../transitions.css">
+</head>
+
+<body>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- ══════════════════════════
+     SIDEBAR
+══════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+
+    <div class="sidebar-brand">
+      <div>
+        <div class="sb-name" style="font-size: 22px;">Briket Kompos</div>
+        <div class="sb-sub" style="font-size: 13px;">SMA Trinitas · Bandung</div>
+      </div>
+    </div>
+
+    <p class="sb-nav-label" data-lang="id">Navigasi Utama</p>
+    <p class="sb-nav-label" data-lang="en">Main Navigation</p>
+    <ul class="sb-links">
+      <li><a href="Pengertian.html" class="active" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Pengertian</span><span data-lang="en">Definition</span></span>
+        </a></li>
+      <li><a href="../ABOUT/about.html" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Tentang Kami</span><span data-lang="en">About Us</span></span>
+        </a></li>
+      <li><a href="../CARA_PEMBUATAN/cara_cara pembuatan.html" onclick="closeSidebar()">
+          <div class="sb-icon-wrapper"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg></div>
+          <span class="sb-text"><span data-lang="id">Cara Pembuatan</span><span data-lang="en">How It's
+              Made</span></span>
+        </a></li>
+    </ul>
+
+    <div class="sb-promo">
+      <div class="promo-icon">
+        <svg class="animated-icon leaf-icon" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+      </div>
+      <div class="promo-content">
+        <div class="promo-title">100% Eco-Friendly</div>
+        <div class="promo-desc" data-lang="id">Mendukung program Go Green.</div>
+        <div class="promo-desc" data-lang="en">Supporting Go Green program.</div>
+      </div>
+    </div>
+
+    <div class="sb-promo sdgs-box">
+      <div class="promo-icon">
+        <svg class="animated-icon target-icon" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+      </div>
+      <div class="promo-content">
+        <div class="promo-title">SDGs 12 Support</div>
+        <div class="promo-desc" data-lang="id">Konsumsi & Produksi Bertanggung Jawab.</div>
+        <div class="promo-desc" data-lang="en">Responsible Consumption & Production.</div>
+      </div>
+    </div>
+
+    <div class="sb-footer">
+      <strong>INSPIRE 2025</strong>
+      <span data-lang="id">Proyek Inovasi Sains<br>Kelompok 3 — Kelas X-2</span>
+      <span data-lang="en">Science Innovation Project<br>Group 3 — Class X-2</span>
+    </div>
+  </aside>
+
+  <!-- ══════════════════════════
+     TOPBAR
+══════════════════════════ -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-btn" onclick="openSidebar()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="Pengertian.html" class="topbar-brand">
+        <img src="../PROFIL/logo-trinitas.png" alt="Logo SMA Trinitas" class="topbar-logo">
+        Briket<span>Kompos</span>
+      </a>
+    </div>
+
+    <nav class="topbar-nav">
+      <a href="#pengertian" data-lang="id">Pengertian</a>
+      <a href="#pengertian" data-lang="en">Definition</a>
+      <a href="#kelebihan" data-lang="id">Kelebihan</a>
+      <a href="#kelebihan" data-lang="en">Benefits</a>
+      <a href="#quotes" data-lang="id">Tim Kami</a>
+      <a href="#quotes" data-lang="en">Our Team</a>
+      <a href="#dokumentasi" data-lang="id">Dokumentasi</a>
+      <a href="#dokumentasi" data-lang="en">Documentation</a>
+    </nav>
+
+
+  </header>
+
+  <!-- ══════════════════════════
+     MAIN
+══════════════════════════ -->
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="hero-mesh">
+        <div class="mesh-blob mb1"></div>
+        <div class="mesh-blob mb2"></div>
+        <div class="mesh-blob mb3"></div>
+      </div>
+
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span data-lang="id">INSPIRE 2025 · SMA Trinitas Bandung</span>
+        <span data-lang="en">INSPIRE 2025 · SMA Trinitas Bandung</span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span data-lang="id">BRIKET<em>KOMPOS.</em></span>
+        <span data-lang="en">Waste Becomes<em>Treasure.</em></span>
+      </h1>
+
+      <p class="hero-desc">
+        <span data-lang="id">Briket Kompos: inovasi hijau dari sampah organik sekolah menjadi pupuk alami berkualitas
+          tinggi yang menyuburkan tanah dan menjaga bumi.</span>
+        <span data-lang="en">Compost Briquettes: a green innovation turning school organic waste into high-quality
+          natural fertilizer that nourishes the soil and protects the earth.</span>
+      </p>
+
+      <div class="hero-cta">
+        <a href="#pengertian" class="btn-lime">
+          <span data-lang="id">Pelajari Lebih Lanjut</span>
+          <span data-lang="en">Learn More</span>
+          ↓
+        </a>
+        <a href="../ABOUT/about.html" class="btn-ghost">
+          <span data-lang="id">Tentang Tim Kami</span>
+          <span data-lang="en">About Our Team</span>
+        </a>
+      </div>
+
+
+
+      <!-- floating image -->
+      <div class="hero-float-image">
+        <img src="../PROFIL/hero-image.jpg" alt="Hasil Akhir Briket Kompos" />
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <!-- SET 1 -->
+          <span class="marquee-item" data-lang="id">Ramah Lingkungan</span>
+          <span class="marquee-item" data-lang="en">Eco-Friendly</span>
+          <span class="marquee-item" data-lang="id">Pupuk Organik Alami</span>
+          <span class="marquee-item" data-lang="en">Natural Organic Fertilizer</span>
+          <span class="marquee-item" data-lang="id">100% Bebas Kimia Terbuka</span>
+          <span class="marquee-item" data-lang="en">100% Chemical Free</span>
+          <span class="marquee-item" data-lang="id">Memperbaiki Struktur Tanah</span>
+          <span class="marquee-item" data-lang="en">Improves Soil Structure</span>
+          <span class="marquee-item" data-lang="id">Zero Waste Sekolah</span>
+          <span class="marquee-item" data-lang="en">School Zero Waste</span>
+          <span class="marquee-item" data-lang="id">Bebas Sampah Organik</span>
+          <span class="marquee-item" data-lang="en">Free of Organic Waste</span>
+          <span class="marquee-item" data-lang="id">Kaya Nutrisi Esensial</span>
+          <span class="marquee-item" data-lang="en">Rich in Essential Nutrients</span>
+          <span class="marquee-item" data-lang="id">Inovasi INSPIRE 2025</span>
+          <span class="marquee-item" data-lang="en">INSPIRE 2025 Innovation</span>
+          <span class="marquee-item" data-lang="id">Solusi Ekosistem Hijau</span>
+          <span class="marquee-item" data-lang="en">Green Ecosystem Solution</span>
+          <span class="marquee-item" data-lang="id">Karya Siswa SMA Trinitas</span>
+          <span class="marquee-item" data-lang="en">Created by Trinitas Students</span>
+
+          <!-- SET 2 -->
+          <span class="marquee-item" data-lang="id">Ramah Lingkungan</span>
+          <span class="marquee-item" data-lang="en">Eco-Friendly</span>
+          <span class="marquee-item" data-lang="id">Pupuk Organik Alami</span>
+          <span class="marquee-item" data-lang="en">Natural Organic Fertilizer</span>
+          <span class="marquee-item" data-lang="id">100% Bebas Kimia Terbuka</span>
+          <span class="marquee-item" data-lang="en">100% Chemical Free</span>
+          <span class="marquee-item" data-lang="id">Memperbaiki Struktur Tanah</span>
+          <span class="marquee-item" data-lang="en">Improves Soil Structure</span>
+          <span class="marquee-item" data-lang="id">Zero Waste Sekolah</span>
+          <span class="marquee-item" data-lang="en">School Zero Waste</span>
+          <span class="marquee-item" data-lang="id">Bebas Sampah Organik</span>
+          <span class="marquee-item" data-lang="en">Free of Organic Waste</span>
+          <span class="marquee-item" data-lang="id">Kaya Nutrisi Esensial</span>
+          <span class="marquee-item" data-lang="en">Rich in Essential Nutrients</span>
+          <span class="marquee-item" data-lang="id">Inovasi INSPIRE 2025</span>
+          <span class="marquee-item" data-lang="en">INSPIRE 2025 Innovation</span>
+          <span class="marquee-item" data-lang="id">Solusi Ekosistem Hijau</span>
+          <span class="marquee-item" data-lang="en">Green Ecosystem Solution</span>
+          <span class="marquee-item" data-lang="id">Karya Siswa SMA Trinitas</span>
+          <span class="marquee-item" data-lang="en">Created by Trinitas Students</span>
+
+          <!-- end duplicate -->
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <!-- SET 1 -->
+          <span class="marquee-item" data-lang="id">Ramah Lingkungan</span>
+          <span class="marquee-item" data-lang="en">Eco-Friendly</span>
+          <span class="marquee-item" data-lang="id">Pupuk Organik Alami</span>
+          <span class="marquee-item" data-lang="en">Natural Organic Fertilizer</span>
+          <span class="marquee-item" data-lang="id">100% Bebas Kimia Terbuka</span>
+          <span class="marquee-item" data-lang="en">100% Chemical Free</span>
+          <span class="marquee-item" data-lang="id">Memperbaiki Struktur Tanah</span>
+          <span class="marquee-item" data-lang="en">Improves Soil Structure</span>
+          <span class="marquee-item" data-lang="id">Zero Waste Sekolah</span>
+          <span class="marquee-item" data-lang="en">School Zero Waste</span>
+          <span class="marquee-item" data-lang="id">Bebas Sampah Organik</span>
+          <span class="marquee-item" data-lang="en">Free of Organic Waste</span>
+          <span class="marquee-item" data-lang="id">Kaya Nutrisi Esensial</span>
+          <span class="marquee-item" data-lang="en">Rich in Essential Nutrients</span>
+          <span class="marquee-item" data-lang="id">Inovasi INSPIRE 2025</span>
+          <span class="marquee-item" data-lang="en">INSPIRE 2025 Innovation</span>
+          <span class="marquee-item" data-lang="id">Solusi Ekosistem Hijau</span>
+          <span class="marquee-item" data-lang="en">Green Ecosystem Solution</span>
+          <span class="marquee-item" data-lang="id">Karya Siswa SMA Trinitas</span>
+          <span class="marquee-item" data-lang="en">Created by Trinitas Students</span>
+
+          <!-- SET 2 -->
+          <span class="marquee-item" data-lang="id">Ramah Lingkungan</span>
+          <span class="marquee-item" data-lang="en">Eco-Friendly</span>
+          <span class="marquee-item" data-lang="id">Pupuk Organik Alami</span>
+          <span class="marquee-item" data-lang="en">Natural Organic Fertilizer</span>
+          <span class="marquee-item" data-lang="id">100% Bebas Kimia Terbuka</span>
+          <span class="marquee-item" data-lang="en">100% Chemical Free</span>
+          <span class="marquee-item" data-lang="id">Memperbaiki Struktur Tanah</span>
+          <span class="marquee-item" data-lang="en">Improves Soil Structure</span>
+          <span class="marquee-item" data-lang="id">Zero Waste Sekolah</span>
+          <span class="marquee-item" data-lang="en">School Zero Waste</span>
+          <span class="marquee-item" data-lang="id">Bebas Sampah Organik</span>
+          <span class="marquee-item" data-lang="en">Free of Organic Waste</span>
+          <span class="marquee-item" data-lang="id">Kaya Nutrisi Esensial</span>
+          <span class="marquee-item" data-lang="en">Rich in Essential Nutrients</span>
+          <span class="marquee-item" data-lang="id">Inovasi INSPIRE 2025</span>
+          <span class="marquee-item" data-lang="en">INSPIRE 2025 Innovation</span>
+          <span class="marquee-item" data-lang="id">Solusi Ekosistem Hijau</span>
+          <span class="marquee-item" data-lang="en">Green Ecosystem Solution</span>
+          <span class="marquee-item" data-lang="id">Karya Siswa SMA Trinitas</span>
+          <span class="marquee-item" data-lang="en">Created by Trinitas Students</span>
+
+          <!-- SET 3 -->
+          <span class="marquee-item" data-lang="id">Ramah Lingkungan</span>
+          <span class="marquee-item" data-lang="en">Eco-Friendly</span>
+          <span class="marquee-item" data-lang="id">Pupuk Organik Alami</span>
+          <span class="marquee-item" data-lang="en">Natural Organic Fertilizer</span>
+          <span class="marquee-item" data-lang="id">100% Bebas Kimia Terbuka</span>
+          <span class="marquee-item" data-lang="en">100% Chemical Free</span>
+          <span class="marquee-item" data-lang="id">Memperbaiki Struktur Tanah</span>
+          <span class="marquee-item" data-lang="en">Improves Soil Structure</span>
+          <span class="marquee-item" data-lang="id">Zero Waste Sekolah</span>
+          <span class="marquee-item" data-lang="en">School Zero Waste</span>
+          <span class="marquee-item" data-lang="id">Bebas Sampah Organik</span>
+          <span class="marquee-item" data-lang="en">Free of Organic Waste</span>
+          <span class="marquee-item" data-lang="id">Kaya Nutrisi Esensial</span>
+          <span class="marquee-item" data-lang="en">Rich in Essential Nutrients</span>
+          <span class="marquee-item" data-lang="id">Inovasi INSPIRE 2025</span>
+          <span class="marquee-item" data-lang="en">INSPIRE 2025 Innovation</span>
+          <span class="marquee-item" data-lang="id">Solusi Ekosistem Hijau</span>
+          <span class="marquee-item" data-lang="en">Green Ecosystem Solution</span>
+          <span class="marquee-item" data-lang="id">Karya Siswa SMA Trinitas</span>
+          <span class="marquee-item" data-lang="en">Created by Trinitas Students</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PENGERTIAN ── -->
+    <section class="section cream" id="pengertian">
+      <div class="fade-up">
+        <span class="tag green" data-lang="id">Apa Itu?</span>
+        <span class="tag green" data-lang="en">What Is It?</span>
+      </div>
+      <h2 class="section-h fade-up d1" style="margin-bottom: 4rem;">
+        <span data-lang="id">Mengenal Briket Kompos</span>
+        <span data-lang="en">Understanding Compost Briquettes</span>
+      </h2>
+
+      <div class="def-grid fade-up d3">
+        <div class="def-card">
+          <div class="def-icon">
+            <div class="animate-cube">
+              <svg viewBox="0 0 100 100" style="width: 50px; height: 50px;">
+                <g transform="translate(50,55) scale(0.95)">
+                  <polygon points="0,-15 30,-30 0,-45 -30,-30" fill="rgba(181,232,83,0.9)" />
+                  <polygon points="-30,-30 0,-15 0,25 -30,10" fill="rgba(45,106,53,0.8)" />
+                  <polygon points="0,-15 30,-30 30,10 0,25" fill="rgba(141,191,58,0.7)" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <h3 data-lang="id">Briket</h3>
+          <h3 data-lang="en">What is a Briquette?</h3>
+          <p data-lang="id">Briket adalah bahan padat yang dipadatkan dari bahan-bahan butiran atau serbuk melalui
+            proses pencetakan menggunakan tekanan. Umumnya dikenal sebagai bahan bakar padat alternatif, namun dalam
+            inovasi modern teknologi briket dapat diaplikasikan pada pupuk untuk mencegah nutrisi cepat menguap,
+            menghemat ruang penyimpanan, dan memastikan dosis yang lebih presisi saat diberikan pada tanaman.</p>
+          <p data-lang="en">A briquette is a solid material compacted from granular or powdered materials through a
+            molding process using pressure. Commonly known as an alternative solid fuel, but in modern innovation,
+            briquetting technology is applied to fertilizers to prevent rapid nutrient evaporation, save storage space,
+            and ensure more precise dosing when applied to plants.</p>
+        </div>
+        <div class="def-card">
+          <div class="def-icon">
+            <div class="animate-leaf">
+              <svg viewBox="0 0 100 100" style="width: 50px; height: 50px;">
+                <defs>
+                  <linearGradient id="g-leaf-def" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#b5e853" />
+                    <stop offset="100%" stop-color="#2d6a35" />
+                  </linearGradient>
+                </defs>
+                <path d="M50 90 Q 5 60, 20 20 C 50 10, 95 40, 50 90 Z" fill="url(#g-leaf-def)" />
+                <path d="M20 20 Q 55 55, 50 90" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"
+                  stroke-dasharray="4" />
+              </svg>
+            </div>
+          </div>
+          <h3 data-lang="id">Kompos</h3>
+          <h3 data-lang="en">What is Compost?</h3>
+          <p data-lang="id">Kompos adalah hasil penguraian bahan organik (sisa makanan, daun, sampah hijau) oleh
+            mikroorganisme menjadi humus kaya nutrisi yang menyuburkan tanah secara alami. Proses pengomposan tidak
+            hanya menghasilkan unsur hara makro (NPK) yang sangat dibutuhkan oleh ekosistem pertanian, tetapi juga
+            berfungsi mengembalikan struktur tanah yang rusak akibat zat kimia, serta menjadi solusi utama gerakan
+            <em>zero waste</em> di sekolah kita.
+          </p>
+          <p data-lang="en">Compost is the result of organic material (food scraps, leaves, green waste) being broken
+            down by microorganisms into nutrient-rich humus that naturally enriches the soil. The composting process not
+            only produces the macro nutrients (NPK) critically needed by agricultural ecosystems, but also restores soil
+            structure damaged by chemicals and serves as the ultimate solution for our school's zero waste movement.</p>
+        </div>
+        <div class="def-card">
+          <div class="def-icon">
+            <div class="animate-star">
+              <svg viewBox="0 0 100 100" style="width: 50px; height: 50px;">
+                <g transform="translate(50,50)">
+                  <polygon points="0,-40 8,-12 40,-8 12,8 20,40 0,15 -20,40 -12,8 -40,-8 -8,-12" fill="#e8c547" />
+                  <polygon points="0,-25 5,-8 25,-5 8,5 12,25 0,10 -12,25 -8,5 -25,-5 -5,-8" fill="#fff"
+                    opacity="0.6" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <h3 data-lang="id">Briket Kompos</h3>
+          <h3 data-lang="en">Compost Briquette</h3>
+          <p data-lang="id">Inovasi brilian berupa kompos murni yang dicetak menjadi briket padat — mudah ditakar,
+            disimpan lama, dan diaplikasikan langsung ke tanaman dalam pot atau lahan kebun. Briket ini bekerja dengan
+            sistem <em>slow-release</em> (pelepasan perlahan) ketika terkena air siraman, memastikan pasokan nutrisi ke
+            akar tanaman terjadi secara kontinu, tidak mudah tercuci oleh hujan, dan sangat ideal dipakai oleh petani
+            maupun pecinta <em>urban farming</em> masa kini.</p>
+          <p data-lang="en">A brilliant innovation where pure compost is molded into solid briquettes — easy to measure,
+            store for a long time, and apply directly to plants in pots or garden beds. These briquettes work with a
+            slow-release system when watered, ensuring a continuous supply of nutrients to plant roots that won't easily
+            wash away with rain, making it highly ideal for both farmers and modern urban farming enthusiasts.</p>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ── KELEBIHAN ── -->
+    <section class="section dark" id="kelebihan">
+      <div class="fade-up">
+        <span class="tag lime" data-lang="id">Keunggulan</span>
+        <span class="tag lime" data-lang="en">Benefits</span>
+      </div>
+      <h2 class="section-h light fade-up d1">
+        <span data-lang="id">Kenapa Briket Kompos?</span>
+        <span data-lang="en">Why Compost Briquettes?</span>
+      </h2>
+      <p class="section-sub light fade-up d2">
+        <span data-lang="id">Lebih dari sekadar pupuk — solusi ekosistem yang holistik untuk tanah, tanaman, dan
+          bumi.</span>
+        <span data-lang="en">More than just fertilizer — a holistic ecosystem solution for soil, plants, and the
+          earth.</span>
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card fade-up" onclick="this.classList.toggle('flipped')">
+          <div class="bc-inner">
+            <div class="bc-front">
+              <div class="bc-icon bc-lime">
+                <svg viewBox="0 0 100 100" class="svg-3d"
+                  style="width: 70px; height: 70px; filter: drop-shadow(0 0 10px rgba(181,232,83,0.4));">
+                  <g class="spin-z-slow">
+                    <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" fill="none" stroke="#b5e853" stroke-width="4"
+                      stroke-dasharray="8 4" />
+                    <polygon points="50,25 72,38 72,62 50,75 28,62 28,38" fill="rgba(181,232,83,0.15)" stroke="#fff"
+                      stroke-width="2" />
+                    <circle cx="50" cy="50" r="8" fill="#b5e853" class="pulse-glow" />
+                  </g>
+                </svg>
+              </div>
+              <h3 data-lang="id">Memperbaiki Struktur Tanah</h3>
+              <h3 data-lang="en">Improves Soil Structure</h3>
+              <button class="bc-detail-btn">
+                <span><span data-lang="id">Info Detail</span><span data-lang="en">More Info</span></span>
+                <span>↻</span>
+              </button>
+            </div>
+            <div class="bc-info">
+              <h4 data-lang="id" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Manfaat Tanah
+              </h4>
+              <h4 data-lang="en" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Soil Benefits
+              </h4>
+              <p data-lang="id" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Selain meningkatkan
+                porositas dan aerasi, briket kompos secara aktif memperbaiki keseimbangan pH tanah. Kandungan humusnya
+                memastikan tanah tetap gembur dalam jangka panjang, mencegah pengerasan tanah, dan meningkatkan
+                kemampuan akar untuk menyerap nutrisi esensial secara maksimal.</p>
+              <p data-lang="en" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Beyond improving porosity
+                and aeration, compost briquettes actively restore soil pH balance. Its humus content ensures long-term
+                soil friability, prevents soil hardening, and enhances the roots' ability to maximize essential nutrient
+                absorption.</p>
+              <div style="margin-top: auto; font-size: 11px; opacity: 0.6; color: var(--lime); text-align: right;">
+                <span data-lang="id">← Klik untuk kembali</span>
+                <span data-lang="en">← Click to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefit-card fade-up d1" onclick="this.classList.toggle('flipped')">
+          <div class="bc-inner">
+            <div class="bc-front">
+              <div class="bc-icon bc-lime">
+                <svg viewBox="0 0 100 100" class="svg-3d"
+                  style="width: 70px; height: 70px; filter: drop-shadow(0 0 10px rgba(181,232,83,0.4));">
+                  <g class="spin-slow">
+                    <ellipse cx="50" cy="50" rx="45" ry="15" fill="none" stroke="#b5e853" stroke-width="2" />
+                    <circle cx="5" cy="50" r="4" fill="#fff" />
+                  </g>
+                  <g class="spin-z-slow" style="transform: rotate(60deg);">
+                    <ellipse cx="50" cy="50" rx="45" ry="15" fill="none" stroke="rgba(181,232,83,0.4)" stroke-width="2"
+                      stroke-dasharray="6 6" />
+                  </g>
+                  <circle cx="50" cy="50" r="10" fill="#b5e853" class="pulse-glow" />
+                  <circle cx="50" cy="50" r="4" fill="#fff" />
+                </svg>
+              </div>
+              <h3 data-lang="id">Meningkatkan Biota Tanah</h3>
+              <h3 data-lang="en">Enhances Soil Biota</h3>
+              <button class="bc-detail-btn">
+                <span><span data-lang="id">Info Detail</span><span data-lang="en">More Info</span></span>
+                <span>↻</span>
+              </button>
+            </div>
+            <div class="bc-info">
+              <h4 data-lang="id" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Ekosistem Hidup
+              </h4>
+              <h4 data-lang="en" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Living Ecosystem
+              </h4>
+              <p data-lang="id" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Bertindak sebagai
+                stimulan
+                biologis yang menghidupkan kembali mikroba tanah menguntungkan. Mendukung pertumbuhan fungi mikoriza
+                untuk memperluas area pencarian nutrisi tanaman, serta menciptakan benteng alami melawan serangan hama
+                tanah melalui keseimbangan ekosistem.</p>
+              <p data-lang="en" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Acts as a biological
+                stimulant that revives beneficial soil microbes. Supports the growth of mycorrhizal fungi to expand the
+                plant's nutrient forage area and creates a natural defense against soil pests through ecosystem balance.
+              </p>
+              <div style="margin-top: auto; font-size: 11px; opacity: 0.6; color: var(--lime); text-align: right;">
+                <span data-lang="id">← Klik untuk kembali</span>
+                <span data-lang="en">← Click to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefit-card fade-up d2" onclick="this.classList.toggle('flipped')">
+          <div class="bc-inner">
+            <div class="bc-front">
+              <div class="bc-icon bc-lime">
+                <svg viewBox="0 0 100 100" class="svg-3d"
+                  style="width: 70px; height: 70px; filter: drop-shadow(0 0 10px rgba(181,232,83,0.4));">
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(181,232,83,0.2)" stroke-width="4"
+                    class="pulse-glow" />
+                  <circle cx="50" cy="50" r="28" fill="none" stroke="rgba(181,232,83,0.5)" stroke-width="3"
+                    class="pulse-glow" style="animation-delay: 0.5s;" />
+                  <g class="spin-z-slow">
+                    <polygon points="50,20 70,50 50,80 30,50" fill="rgba(181,232,83,0.15)" stroke="#fff"
+                      stroke-width="2" />
+                    <circle cx="50" cy="50" r="6" fill="#b5e853" />
+                  </g>
+                </svg>
+              </div>
+              <h3 data-lang="id">Nutrisi Slow-Release</h3>
+              <h3 data-lang="en">Slow-Release Nutrients</h3>
+              <button class="bc-detail-btn">
+                <span><span data-lang="id">Info Detail</span><span data-lang="en">More Info</span></span>
+                <span>↻</span>
+              </button>
+            </div>
+            <div class="bc-info">
+              <h4 data-lang="id" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Efisiensi Nutrisi
+              </h4>
+              <h4 data-lang="en" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Nutrient
+                Efficiency
+              </h4>
+              <p data-lang="id" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Struktur padat briket
+                dirancang untuk melepaskan unsur hara secara terkendali (controlled-release). Sangat efektif mencegah
+                pencucian hara (leaching) saat hujan lebat, memastikan tanaman mendapatkan asupan nutrisi yang stabil
+                setiap harinya secara efisien.</p>
+              <p data-lang="en" style="font-size: 15.5px; text-align: left; line-height: 1.7;">The solid structure is
+                designed for controlled-release of nutrients. It is highly effective in preventing nutrient leaching
+                during heavy rains, ensuring plants receive a stable daily supply of nutrients efficiently.</p>
+              <div style="margin-top: auto; font-size: 11px; opacity: 0.6; color: var(--lime); text-align: right;">
+                <span data-lang="id">← Klik untuk kembali</span>
+                <span data-lang="en">← Click to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefit-card fade-up d3" onclick="this.classList.toggle('flipped')">
+          <div class="bc-inner">
+            <div class="bc-front">
+              <div class="bc-icon bc-lime">
+                <svg viewBox="0 0 100 100" class="svg-3d"
+                  style="width: 75px; height: 75px; filter: drop-shadow(0 0 12px rgba(181,232,83,0.4));">
+                  <path
+                    d="M 25 50 C 25 20, 45 20, 50 50 C 55 80, 75 80, 75 50 C 75 20, 55 20, 50 50 C 45 80, 25 80, 25 50"
+                    fill="none" stroke="#b5e853" stroke-width="6" stroke-linecap="round" stroke-dasharray="40 10"
+                    class="spin-z-slow" />
+                  <path
+                    d="M 25 50 C 25 20, 45 20, 50 50 C 55 80, 75 80, 75 50 C 75 20, 55 20, 50 50 C 45 80, 25 80, 25 50"
+                    fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="50" cy="50" r="6" fill="#b5e853" class="pulse-glow" />
+                </svg>
+              </div>
+              <h3 data-lang="id">Zero Waste</h3>
+              <h3 data-lang="en">Zero Waste</h3>
+              <button class="bc-detail-btn">
+                <span><span data-lang="id">Info Detail</span><span data-lang="en">More Info</span></span>
+                <span>↻</span>
+              </button>
+            </div>
+            <div class="bc-info">
+              <h4 data-lang="id" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Kelestarian Hijau
+              </h4>
+              <h4 data-lang="en" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Green
+                Sustainability</h4>
+              <p data-lang="id" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Mengubah limbah organik
+                sekolah menjadi produk sekunder yang berharga. Strategi ini secara nyata membantu pengurangan emisi gas
+                metana di TPA dan menanamkan budaya ramah lingkungan serta kemandirian pengelolaan sampah bagi seluruh
+                warga sekolah.</p>
+              <p data-lang="en" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Converts school organic
+                waste into valuable secondary products. This strategy significantly helps reduce methane gas emissions
+                in landfills and instills an eco-friendly culture and waste management independence for all school
+                members.</p>
+              <div style="margin-top: auto; font-size: 11px; opacity: 0.6; color: var(--lime); text-align: right;">
+                <span data-lang="id">← Klik untuk kembali</span>
+                <span data-lang="en">← Click to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefit-card fade-up d1" onclick="this.classList.toggle('flipped')">
+          <div class="bc-inner">
+            <div class="bc-front">
+              <div class="bc-icon bc-lime">
+                <svg viewBox="0 0 100 100" class="svg-3d"
+                  style="width: 70px; height: 70px; filter: drop-shadow(0 0 10px rgba(181,232,83,0.4));">
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="#b5e853" stroke-width="2" stroke-dasharray="5 5"
+                    class="spin-z-slow" />
+                  <circle cx="50" cy="50" r="28" fill="rgba(181,232,83,0.15)" stroke="#fff" stroke-width="2" />
+                  <path d="M 50 65 Q 35 50, 50 30 Q 65 50, 50 65 Z" fill="#b5e853" class="pulse-glow" />
+                </svg>
+              </div>
+              <h3 data-lang="id">Hemat Biaya</h3>
+              <h3 data-lang="en">Cost-Efficient</h3>
+              <button class="bc-detail-btn">
+                <span><span data-lang="id">Info Detail</span><span data-lang="en">More Info</span></span>
+                <span>↻</span>
+              </button>
+            </div>
+            <div class="bc-info">
+              <h4 data-lang="id" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Ekonomi Sirkular
+              </h4>
+              <h4 data-lang="en" style="color: var(--lime); margin-bottom: 0.8rem; font-size: 18.5px;">Circular Economy
+              </h4>
+              <p data-lang="id" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Menghilangkan
+                ketergantungan pada pupuk kimia mahal dengan bahan baku gratis dari lingkungan sekolah. Meningkatkan
+                produktivitas tanaman dalam jangka panjang sekaligus menekan biaya operasional perawatan taman hingga
+                titik terendah.</p>
+              <p data-lang="en" style="font-size: 15.5px; text-align: left; line-height: 1.7;">Eliminates dependence on
+                expensive chemical fertilizers with free raw materials from the school environment. Increases long-term
+                plant productivity while reducing garden maintenance operational costs to the lowest point.</p>
+              <div style="margin-top: auto; font-size: 11px; opacity: 0.6; color: var(--lime); text-align: right;">
+                <span data-lang="id">← Klik untuk kembali</span>
+                <span data-lang="en">← Click to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DATA & QUOTES ── -->
+    <section class="section dark" id="quotes" style="background: var(--forest);">
+      <div class="fade-up">
+        <span class="tag gold" data-lang="id">Data & Fakta</span>
+        <span class="tag gold" data-lang="en">Data & Facts</span>
+      </div>
+      <h2 class="section-h light fade-up d1">
+        <span data-lang="id">Didukung Riset & Data</span>
+        <span data-lang="en">Backed by Research & Data</span>
+      </h2>
+      <p class="section-sub light fade-up d2">
+        <span data-lang="id">Bukan sekadar klaim — bukti ilmiah yang menguatkan urgensi solusi ini.</span>
+        <span data-lang="en">Not just claims — scientific evidence strengthening the urgency of this solution.</span>
+      </p>
+
+      <div class="quotes-grid">
+        <div class="quote-card reveal-left">
+          <div class="q-mark">"</div>
+          <p class="q-text" data-lang="id">Pupuk organik secara konsisten terbukti meningkatkan kesehatan tanah dan
+            produktivitas tanaman, mengurangi ketergantungan pada input kimia secara signifikan.</p>
+          <p class="q-text" data-lang="en">Organic fertilizers consistently prove to improve soil health and crop
+            productivity, significantly reducing dependence on chemical inputs.</p>
+          <div class="q-source">
+            FAO, 2023
+            <span data-lang="id">Organisasi Pangan dan Pertanian Dunia</span>
+            <span data-lang="en">World Food and Agriculture Organization</span>
+          </div>
+        </div>
+        <div class="quote-card fade-up d1">
+          <div class="q-mark">"</div>
+          <p class="q-text" data-lang="id">Volume sampah di Indonesia mencapai 34,2 juta ton pada 2024, dengan 40–45% di
+            antaranya merupakan sampah organik rumah tangga yang belum dimanfaatkan secara optimal.</p>
+          <p class="q-text" data-lang="en">Indonesia's waste volume reached 34.2 million tons in 2024, with 40–45% being
+            household organic waste not yet optimally utilized.</p>
+          <div class="q-source">
+            SIPSN — Kementerian LHK
+            <span data-lang="id">Sistem Informasi Pengelolaan Sampah Nasional, 2024</span>
+            <span data-lang="en">National Waste Management Information System, 2024</span>
+          </div>
+        </div>
+        <div class="quote-card reveal-right d2">
+          <div class="q-mark">"</div>
+          <p class="q-text" data-lang="id">Pemberian kompos organik mampu meningkatkan biomassa mikroba tanah,
+            memperbaiki struktur tanah, serta meningkatkan retensi air dan zat hara yang tersedia bagi tanaman.</p>
+          <p class="q-text" data-lang="en">Organic compost application can increase soil microbial biomass, improve soil
+            structure, and enhance water and nutrient retention available to plants.</p>
+          <div class="q-source">
+            Suryani, E. (2022)
+            <span>JUSTER: Jurnal Sains dan Terapan, Vol. 1(1)</span>
+          </div>
+        </div>
+        <div class="quote-card fade-up">
+          <div class="q-mark">"</div>
+          <p class="q-text" data-lang="id">Pengolahan limbah organik sekolah menjadi pupuk briket dapat mengurangi emisi
+            gas rumah kaca dari sektor limbah rumah tangga hingga 30% per tahun.</p>
+          <p class="q-text" data-lang="en">Processing school organic waste into briquette fertilizer can reduce
+            greenhouse gas emissions from the household waste sector by up to 30% annually.</p>
+          <div class="q-source">
+            KLHK, 2023
+            <span data-lang="id">Laporan Capaian Pengelolaan Sampah</span>
+            <span data-lang="en">Waste Management Achievement Report</span>
+          </div>
+        </div>
+        <div class="quote-card fade-up d1">
+          <div class="q-mark">"</div>
+          <p class="q-text" data-lang="id">Efisiensi penyerapan Nitrogen oleh akar pada sistem pupuk padat (briket)
+            tercatat 40% lebih tinggi dibandingkan sistem pupuk curah konvensional.</p>
+          <p class="q-text" data-lang="en">Nitrogen absorption efficiency by roots in solid fertilizer systems
+            (briquettes) is recorded 40% higher than conventional bulk fertilizer systems.</p>
+          <div class="q-source">
+            Jurnal Agroteknologi, 2021
+            <span>Riset Efisiensi Pupuk Organik Padat</span>
+          </div>
+        </div>
+        <div class="quote-card fade-up d2">
+          <div class="q-mark">"</div>
+          <p class="q-text" data-lang="id">Program Zero Waste berbasis sekolah merupakan model edukasi lingkungan paling
+            efektif dalam membentuk karakter keberlanjutan pada generasi muda.</p>
+          <p class="q-text" data-lang="en">School-based Zero Waste programs are the most effective environmental
+            education models in shaping sustainability character in the younger generation.</p>
+          <div class="q-source">
+            World Bank, 2022
+            <span data-lang="id">Laporan Edukasi Lingkungan Global</span>
+            <span data-lang="en">Global Environmental Education Report</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PENDAPAT TIM ── -->
+    <section class="section"
+      style="background: var(--forest); border-top: 1px solid rgba(181, 232, 83, 0.05); padding-top: 8rem; padding-bottom: 8rem;">
+      <div class="fade-up" style="text-align: center; margin-bottom: 5rem;">
+        <span class="tag lime">Opini Tim</span>
+        <h2 class="section-h light">Mengapa Memilih Briket Kompos?</h2>
+        <p class="section-sub light" style="margin-left: auto; margin-right: auto; text-align: center;">
+          Inilah pendapat dari tim kami mengenai keunggulan briket kompos sebagai solusi pupuk masa depan.
+        </p>
+      </div>
+
+      <div class="opinion-grid">
+        <!-- Tiara -->
+        <div class="fade-up d1 opinion-card"
+          style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.2rem; border-radius: 24px; cursor: default; height: 100%;">
+          <p
+            style="color: rgba(255,255,255,0.8); line-height: 1.8; font-style: italic; margin-bottom: 2rem; font-size: 1.05rem;">
+            "Menurut saya, briket kompos ini sangat revolusioner karena bisa mengurangi bau sampah organik di sekolah
+            dan lebih mudah dikemas secara rapi."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div
+              style="width: 45px; height: 45px; border-radius: 14px; overflow: hidden; border: 1.5px solid rgba(181, 232, 83, 0.4); background: var(--forest); display: flex; align-items: center; justify-content: center;">
+              <img src="../PROFIL/tiara.jpeg" alt="Tiara" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="text-align: left;">
+              <div style="color: white; font-weight: 700; font-size: 1rem; line-height: 1.2;">Angelia Tiara</div>
+              <div style="color: var(--lime); font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Tim Riset</div>
+            </div>
+          </div>
+        </div>
+        <!-- Jason -->
+        <div class="fade-up d2 opinion-card"
+          style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.2rem; border-radius: 24px; cursor: default; height: 100%;">
+          <p
+            style="color: rgba(255,255,255,0.8); line-height: 1.8; font-style: italic; margin-bottom: 2rem; font-size: 1.05rem;">
+            "Bentuknya yang padat membuat nutrisi di dalamnya tidak mudah luntur saat penyiraman, sehingga tanaman
+            mendapatkan pupuk secara bertahap."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div
+              style="width: 45px; height: 45px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(181, 232, 83, 0.3); background: var(--forest); display: flex; align-items: center; justify-content: center;">
+              <img src="../PROFIL/jason-avatar.jpg" alt="Jason" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="text-align: left;">
+              <div style="color: white; font-weight: 700; font-size: 1rem; line-height: 1.2;">Jason Kurniawan</div>
+              <div style="color: var(--lime); font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Tim Produksi</div>
+            </div>
+          </div>
+        </div>
+        <!-- Evert -->
+        <div class="fade-up d3 opinion-card"
+          style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.2rem; border-radius: 24px; cursor: default; height: 100%;">
+          <p
+            style="color: rgba(255,255,255,0.8); line-height: 1.8; font-style: italic; margin-bottom: 2rem; font-size: 1.05rem;">
+            "Inovasi ini mendukung gerakan Zero Waste di SMA Trinitas. Dari siswa, oleh siswa, dan untuk bumi yang lebih
+            hijau."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div
+              style="width: 45px; height: 45px; border-radius: 14px; overflow: hidden; border: 1.5px solid rgba(181, 232, 83, 0.4); background: var(--forest); display: flex; align-items: center; justify-content: center;">
+              <img src="../PROFIL/evert.jpeg" alt="Evert" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="text-align: left;">
+              <div style="color: white; font-weight: 700; font-size: 1rem; line-height: 1.2;">Timothy Evert</div>
+              <div style="color: var(--lime); font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Tim Riset</div>
+            </div>
+          </div>
+        </div>
+        <!-- Matthew -->
+        <div class="fade-up d1 opinion-card"
+          style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.2rem; border-radius: 24px; cursor: default; height: 100%;">
+          <p
+            style="color: rgba(255,255,255,0.8); line-height: 1.8; font-style: italic; margin-bottom: 2rem; font-size: 1.05rem;">
+            "Dengan briket kompos, kita tidak perlu repot lagi menggali tanah. Cukup letakkan dan briket akan
+            menyuburkan tanaman."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div
+              style="width: 45px; height: 45px; border-radius: 14px; overflow: hidden; border: 1.5px solid rgba(181, 232, 83, 0.4); background: var(--forest); display: flex; align-items: center; justify-content: center;">
+              <img src="../PROFIL/matthew.jpg" alt="Matthew" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="text-align: left;">
+              <div style="color: white; font-weight: 700; font-size: 1rem; line-height: 1.2;">Keith Matthew</div>
+              <div style="color: var(--lime); font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Tim Dokumentasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DOKUMENTASI ── -->
+    <section class="section dark" id="dokumentasi" style="background: var(--deep); text-align: center;">
+      <div class="fade-up" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 3.5rem;">
+        <span
+          style="background: rgba(181, 232, 83, 0.15); color: var(--lime); padding: 8px 24px; border-radius: 12px; font-size: 22px; font-weight: 800; border: 1px solid rgba(181, 232, 83, 0.3); margin-bottom: 1.5rem;">16
+          Januari 2026</span>
+
+        <h2 class="section-h light" style="margin-bottom: 1rem; text-align: center; width: 100%;">
+          <span data-lang="id">Dokumentasi Pembuatan Kompos</span>
+          <span data-lang="en">Compost Production Documentation</span>
+        </h2>
+
+        <p class="section-sub light"
+          style="margin-left: auto; margin-right: auto; text-align: center; margin-bottom: 0;">
+          <span data-lang="id">Berikut adalah potret dokumentasi kegiatan pembuatan briket kompos oleh tim kami secara
+            langsung.</span>
+          <span data-lang="en">Here are several snapshots documenting our team's hands-on compost briquette production
+            process.</span>
+        </p>
+      </div>
+
+      <div class="doc-gallery">
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc5.jpg" alt="Proses pengumpulan sampah organik"
+            loading="lazy"></div>
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc6.jpg" alt="Pemberian cairan dekomposer EM4"
+            loading="lazy"></div>
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc7.jpg" alt="Wadah fermentasi briket kompos"
+            loading="lazy"></div>
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc8.jpg" alt="Hasil akhir briket kompos kering"
+            loading="lazy"></div>
+      </div>
+
+      <div class="fade-up"
+        style="display: flex; flex-direction: column; align-items: center; margin-top: 8rem; margin-bottom: 3.5rem;">
+        <span
+          style="background: rgba(181, 232, 83, 0.15); color: var(--lime); padding: 8px 24px; border-radius: 12px; font-size: 22px; font-weight: 800; border: 1px solid rgba(181, 232, 83, 0.3); margin-bottom: 1.5rem;">18
+          Maret 2026</span>
+        <h2 class="section-h light" style="margin-bottom: 1rem; text-align: center; width: 100%;">
+          <span data-lang="id">Dokumentasi Pembuatan Briket</span>
+          <span data-lang="en">Briquette Production Documentation</span>
+        </h2>
+        <p class="section-sub light"
+          style="margin-left: auto; margin-right: auto; text-align: center; margin-bottom: 0;">
+          <span data-lang="id">Berikut adalah potret dokumentasi kegiatan pembuatan briket kompos oleh tim kami secara
+            langsung.</span>
+          <span data-lang="en">Here are several snapshots documenting our team's hands-on compost briquette production
+            process.</span>
+        </p>
+      </div>
+
+      <div class="doc-gallery">
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc1.jpg" alt="Dokumentasi 1" loading="lazy"></div>
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc2.jpg" alt="Dokumentasi 2" loading="lazy"></div>
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc3.jpg" alt="Dokumentasi 3" loading="lazy"></div>
+        <div class="doc-img-wrap"><img src="../DOKUMENTASI/doc4.jpg" alt="Dokumentasi 4" loading="lazy"></div>
+      </div>
+    </section>
+
+
+    <!-- ── CONTACT ── -->
+    <section class="section" id="kontak" style="background: var(--forest); text-align:center;">
+      <div class="fade-up">
+        <span class="tag lime" data-lang="id">Kontak</span>
+        <span class="tag lime" data-lang="en">Contact</span>
+      </div>
+      <h2 class="section-h light fade-up d1" style="text-align:center;">
+        <span data-lang="id">Tertarik dengan Produk Kami?</span>
+        <span data-lang="en">Interested in Our Product?</span>
+      </h2>
+      <p class="section-sub light fade-up d2" style="margin-left:auto; margin-right:auto; text-align:center;">
+        <span data-lang="id">Hubungi kami langsung melalui WhatsApp untuk informasi lebih lanjut atau pemesanan.</span>
+        <span data-lang="en">Contact us directly via WhatsApp for more information or to place an order.</span>
+      </p>
+      <div class="fade-up d3"
+        style="display:flex; gap:1.2rem; justify-content:center; flex-wrap:wrap; align-items:center;">
+        <a href="../ABOUT/about.html" class="cyber-btn">
+          <span data-lang="id">Pelajari Lebih Lanjut</span>
+          <span data-lang="en">Discover More About Us</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════
+       FOOTER
+  ══════════════════════════ -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col branding-col">
+        <div class="footer-logo">Briket<span>Kompos</span></div>
+        <p class="footer-desc">
+          Inovasi pupuk organik berkelanjutan dari limbah sekolah untuk bumi yang lebih hijau. Karya siswa SMA Trinitas
+          Bandung melalui program INSPIRE 2025.
+        </p>
+        <div style="display: flex; gap: 15px;">
+          <a href="#"
+            style="color: var(--lime); text-decoration: none; font-weight: 700; font-size: 0.9rem;">Instagram</a>
+          <a href="#"
+            style="color: var(--lime); text-decoration: none; font-weight: 700; font-size: 0.9rem;">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#pengertian">Apa itu Briket?</a></li>
+          <li><a href="#kelebihan">Keunggulan</a></li>
+          <li><a href="#dokumentasi">Galeri Proses</a></li>
+          <li><a href="../ABOUT/about.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>
+          <strong>SMA Trinitas Bandung</strong><br>
+          Jl. Kebon Jati No.209<br>
+          Bandung, Jawa Barat<br><br>
+          <span style="color: var(--lime);">Kelompok 3 — X-2</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 BriketKompos · SMA Trinitas Bandung · All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script halaman -->
+  <script src="Pengertian.js"></script>
+  <script>
+    function openWaModal() {
+      const overlay = document.getElementById('waModalOverlay');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      // Apply current language
+      const lang = document.documentElement.getAttribute('data-lang') || 'id';
+      overlay.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+      });
+    }
+    function closeWaModal(e) {
+      if (e.target === document.getElementById('waModalOverlay')) {
+        closeWaModalDirect();
+      }
+    }
+    function closeWaModalDirect() {
+      const overlay = document.getElementById('waModalOverlay');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeWaModalDirect();
+    });
+  </script>
+  <!-- Global Transitions & Animations Script -->
+  <script src="../transitions.js"></script>
+</body>
+
+</html>
